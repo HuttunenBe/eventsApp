@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import useAxios from "../../../Hooks/UseAxios";
-import { DotLoader } from "react-spinners";
 import EditEventForm from "../EditEvent/EditEventForm";
 import EventDisplay from "./EventDisplay";
+import Loading from "../../../Components/Loading/Loading"
 import "./eventListItems.css";
 
 const EventList = ({
@@ -68,6 +68,7 @@ const EventList = ({
     setLoading(true);
     put(`api/events/${id}`, editedEvent)
       .then(() => {
+          alert("Event updated successfully!"); 
         setIsEditing(false);
         onEventModified();
       })
@@ -83,6 +84,7 @@ const EventList = ({
     if (window.confirm("Are you sure you want to delete this event?")) {
       del(`api/events/${id}`)
         .then(() => {
+          alert("Event deleted successfully!"); 
           onEventModified();
         })
         .catch((error) => {
@@ -102,7 +104,7 @@ const EventList = ({
   return (
     <>
       {loading ? (
-        <DotLoader size={60} />
+        <Loading />
       ) : (
         <div className="eventTicket">
           {!isEditing ? (
