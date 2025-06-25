@@ -132,7 +132,7 @@ padding-right: 1rem;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
-  box-shadow: 0 8px 30px rgba(217, 187, 249, 0.4);
+  
 }
 
 .benefitsSection h2{
@@ -265,6 +265,10 @@ body.darkMode .benefitCard {
 
 body.darkMode .benefitCard:hover {
   box-shadow: 0 10px 25px rgba(155, 100, 185, 0.4);
+}
+
+body.darkmode .benefitCard img {
+  box-shadow: none;
 }
 
 body.darkMode .benefitsSection {

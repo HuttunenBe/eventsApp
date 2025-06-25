@@ -1,6 +1,7 @@
 import "./eventDetails.css";
 
-const EventDetailsContent = ({ event }) => {
+
+const EventDetailsContent = ({ event, navigate }) => {
   return (
     <div className="eventDetailContainer">
       <div className="eventDetailHeader">

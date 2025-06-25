@@ -1,0 +1,73 @@
+.EditEventContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 2rem 1.5rem;
+  border-radius: 2rem;
+  background-color: #e6d3f9;
+}
+
+.EditEventContainer input,
+.EditEventContainer select {
+  box-sizing: border-box;
+  width: 200px;
+  border: 2px solid #8338ec81;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  background-color: #f0eaff;
+  color: #552087;
+}
+
+.EditEventContainer input:focus,
+.EditEventContainer select:focus {
+  outline: none;
+  border-color: #9a32d1;
+}
+
+.EditEventContainer button {
+  padding: 0.8prem 1rem;
+  border: none;
+  width: 100%;
+  border-radius: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 1rem;
+  font-size: 1rem;
+  background-color: #8338ec;
+  color: white;
+}
+
+.EditEventContainer button:hover {
+  background-color: #9a32d1;
+}
+
+body.darkMode .EditEventContainer {
+  background-color: #1a1a1a;
+  color: #f1e9ff;
+  box-shadow: none;
+}
+
+body.darkMode .EditEventContainer button {
+  background-color: #6c4ab6;
+  color: white;
+}
+
+body.darkMode .EditEventContainer button:hover {
+  background-color: #8e63e2;
+}
+
+body.darkMode .EditEventContainer input,
+body.darkMode .EditEventContainer select {
+  background-color: #2b1d47;
+  color: #e5d9ff;
+  border-color: #a084dc;
+}
+
+body.darkMode .EditEventContainer input:focus,
+body.darkMode .EditEventContainer select:focus {
+  border-color: #c89afc;
+  box-shadow: 0 0 6px #c89afc;
+}

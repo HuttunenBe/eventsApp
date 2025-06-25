@@ -3,6 +3,10 @@ import { useNavigate, Link } from "react-router";
 import useAxios from "../../Hooks/UseAxios";
 import "./addEvent.css";
 
+
+const currentDate = new Date().toISOString().split("T", 1)[0];
+
+
 const AddEvent = ({ onEventAdded }) => {
   const { post } = useAxios();
   const navigate = useNavigate();
@@ -66,6 +70,7 @@ const AddEvent = ({ onEventAdded }) => {
     post("api/events", eventToSend)
       .then((res) => {
         onEventAdded?.(res.data);
+        alert("Event saved successfully!"); 
         navigate("/events");
         setFormData({
           name: "",
@@ -111,6 +116,7 @@ const AddEvent = ({ onEventAdded }) => {
               name="date"
               type="date"
               value={formData.date}
+                min={currentDate}
               onChange={handleChange}
             />
             {errors.date && <p className="error">{errors.date}</p>}

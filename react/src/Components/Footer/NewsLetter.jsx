@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { DotLoader } from "react-spinners";
+import Loading from "../Loading/Loading";
 
 function Newsletter() {
   const [loading, setLoading] = useState(false);
@@ -33,7 +34,7 @@ function Newsletter() {
       <h2 id="subscribeHeader">Subscribe to our newsletter!</h2>
       {!isEmailValid ? <p>Please enter a valid email address</p> : null}
       {loading ? (
-        <DotLoader size={60} />
+        <Loading />
       ) : (
         <form onSubmit={handleSubmit}>
           <input
