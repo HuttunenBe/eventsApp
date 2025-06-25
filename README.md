@@ -16,7 +16,7 @@ Users can explore, add, edit and delete events, with all changes saved to a data
 *   **📜 Back to Top Button** – Easy scroll back
 *   **🎠 Popular Events Slider** – Scrollable slider for popular events
 
-*   Working on: Map, Weather, User Authentication
+*   Working on: Map, Weather, User Authentication, Loading
 
 
 
