@@ -1,0 +1,301 @@
+.pageWrapper {
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+  color: #240046;
+  background-color: #f7f3fb;
+}
+
+.eventContainer {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+}
+
+.eventHeroSection {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 80vw;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  background-color: #d2b6ee;
+  background: linear-gradient(235deg, #f24dc6, #6c5ad8);
+  padding: 3rem;
+  border-radius: 2rem;
+}
+
+.eventHeroSection h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.eventHeroSection p {
+  max-width: 600px;
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin: 0 auto;
+}
+
+.controlsWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.searchInput,
+.sortSelect {
+  padding: 0.5rem 1rem;
+  border: 2px solid #b153f0;
+  border-radius: 2rem;
+  font-size: 1rem;
+  color: #bd77fe;
+  transition: border-color 0.3s ease;
+}
+
+.searchInput::placeholder {
+  color: #b99de5;
+}
+
+.searchInput:focus,
+.sortSelect:focus {
+  outline: none;
+  border-color: #9a32d1;
+}
+
+.toggleViewButton {
+  background-color: #8338ec;
+  color: white;
+  border-radius: 2rem;
+border:none;
+padding-left: 1rem;
+padding-right: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.toggleViewButton:hover {
+  background-color: #9a32d1;
+}
+
+.errorMessage {
+  color: #d90429;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.benefitsSection {
+  background: linear-gradient(135deg, #f1a6fa, #c79af7);
+  padding: 4rem 2rem;
+  border-radius: 2rem;
+  max-width: 1100px;
+  margin: 1rem auto;
+  
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(217, 187, 249, 0.4);
+  flex-wrap: wrap;
+}
+
+.benefitCard {
+  background-color: white;
+  padding: 1.8rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgba(217, 187, 249, 0.4);
+  text-align: left;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+  border-left: rgb(146, 36, 236) 5px solid;
+  gap: 1rem;
+}
+
+.benefitCard:hover {
+  box-shadow: 0 10px 25px rgba(155, 100, 185, 0.35);
+  transform: translateY(-5px);
+}
+
+.benefitCard img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 8px 30px rgba(217, 187, 249, 0.4);
+}
+
+.benefitsSection h2{
+   margin-bottom: 3rem;
+   color:#ffffff;
+   font-size: 2.2rem;
+   margin-top: 0;
+  
+}
+
+.benefitCard h4 {
+  margin: 0 0 0.3rem 0;
+  color: #7a3fbf;
+  font-size: 1.3rem;
+ 
+  
+}
+
+.benefitCard p {
+  margin: 0;
+  color: #4b2a6c;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.faqSection {
+  margin-top: 3rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faqSection h2 {
+  color: #5a189a;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.faqItem {
+  background: #fff;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  border-left: #4a306d solid 4px;
+  border-radius: 0.2rem;
+  box-shadow: 0 8px 30px rgba(217, 187, 249, 0.4);
+  color: #240046;
+}
+
+.faqItem h4 {
+  color: #7209b7;
+  margin-bottom: 0.4rem;
+}
+
+
+@media (max-width: 850px) {
+
+  
+  .benefitCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }}
+
+@media (max-width: 600px) {
+  .controlsWrapper {
+    flex-direction: column;
+  }
+  
+
+  .sortSelect,
+  .toggleViewButton,
+  .searchInput {
+    flex: 1 1 auto;
+  }
+
+   
+  .toggleViewButton
+   {
+    padding: 1rem 0rem;
+  }
+}
+
+body.darkMode .pageWrapper {
+  background: none;
+  background-color: #1a1a1a;
+  color: #f1e9ff;
+}
+
+body.darkMode .eventHeroSection {
+  background: linear-gradient(135deg, #8f3985, #372772);
+}
+
+body.darkMode .eventHeroSection h1,
+body.darkMode .eventHeroSection p {
+  color: #ffffff;
+}
+
+body.darkMode .searchInput,
+body.darkMode .sortSelect {
+  background-color: #2b1d47;
+  color: #e5d9ff;
+  border-color: #a084dc;
+}
+
+body.darkMode .searchInput::placeholder {
+  color: #c7b6f2;
+}
+
+body.darkMode .searchInput:focus,
+body.darkMode .sortSelect:focus {
+  border-color: #c89afc;
+}
+
+body.darkMode .toggleViewButton {
+  background-color: #6c4ab6;
+  color: white;
+}
+
+body.darkMode .toggleViewButton:hover {
+  background-color: #8e63e2;
+}
+
+
+
+body.darkMode .benefitCard {
+  background-color: #202020;
+  color: #f1e9ff;
+  box-shadow: none;
+}
+
+body.darkMode .benefitCard:hover {
+  box-shadow: 0 10px 25px rgba(155, 100, 185, 0.4);
+}
+
+body.darkMode .benefitsSection {
+  background: none;
+  background-color: #2f2f2f;
+  box-shadow: none;
+}
+
+body.darkMode .benefitCard h4 {
+  color: #c59bff;
+}
+
+body.darkMode .benefitCard p {
+  color: #d8c6f1;
+}
+
+body.darkMode .faqItem {
+  background-color: #222222;
+  color: #f1e9ff;
+  border-left: #6a4ca5 solid 4px;
+  box-shadow: none;
+}
+
+body.darkMode .faqItem h4 {
+  color: #b589f6;
+}
+
+body.darkMode .faqSection h2 {
+  color: #c9a9ff;
+}
+
+body.darkMode .errorMessage {
+  color: #ff6b81;
+}

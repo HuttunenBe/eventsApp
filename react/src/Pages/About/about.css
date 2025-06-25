@@ -1,0 +1,379 @@
+.missionSection h2,
+.storySection h2,
+.featuresSection h2,
+.teamSection h2,
+.actionSection h2,
+.featuresSection h3,
+.teamSection h4 {
+  font-weight: 700;
+  color: #5f4bb6;
+  font-size: 2rem;
+}
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #dc6df5, #523abc);
+  color: #e0dffb;
+  padding: 2rem 2.5rem 0;
+  border-radius: 1.8rem;
+  box-shadow: 0 10px 30px rgba(111, 85, 214, 0.4);
+  max-width: 90vw;
+  margin: 1.5rem auto 2rem;
+}
+
+.heroContent {
+  margin-bottom: 4rem;
+}
+
+.heroContent h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.heroContent p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.4;
+  color: #cfcbee;
+}
+
+.createButton {
+  background: linear-gradient(135deg, #e00d61, #de11a0);
+  color: #f5f3ff;
+  padding: 1rem 2.5rem;
+  border-radius: 1.2rem;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.createButton:hover {
+  background: linear-gradient(135deg, #7d57b9, #4f3ea9);
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(111, 85, 214, 0.4);
+}
+
+.missionSection,
+.storySection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3.5rem;
+  background: linear-gradient(45deg, #f5f7ff, #e8e3ff);
+  padding: 3.5rem 2.5rem;
+  text-align: center;
+  border-radius: 1.8rem;
+  box-shadow: 0 10px 30px rgba(111, 85, 214, 0.4);
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.storySection {
+  background: #1565c036;
+}
+
+.missionContent,
+.storyContent {
+  flex: 1;
+  padding-right: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #3b2c57;
+  text-align: left;
+}
+
+.missionContent h2,
+.storyContent h2 {
+  font-size: 2.6rem;
+  margin-bottom: 1.8rem;
+  text-align: center;
+}
+
+.missionContent h2::after,
+.storyContent h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #b38feb, #6e57d0);
+  margin: 1rem auto 0;
+}
+
+.missionContent p,
+.storyContent p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #3b2c57;
+  text-align: center;
+}
+
+.visionImage,
+.storyImage {
+  flex: 1;
+  min-width: 320px;
+}
+
+.visionImage img,
+.storyImage img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(111, 85, 214, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.visionImage img:hover,
+.storyImage img:hover {
+  transform: scale(1.03) rotate(-2deg);
+  box-shadow: 0 12px 35px rgba(40, 35, 75, 0.25);
+}
+
+.featuresSection {
+  background-color: #e1d7fbcc;
+  max-width: 90vw;
+  margin: 0 auto 2rem;
+  text-align: center;
+  padding: 3.5rem 2.5rem;
+  border-radius: 2.5rem;
+
+  box-shadow: 0 10px 30px rgba(111, 85, 214, 0.4);
+}
+
+.featuresGrid {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 90%;
+}
+
+.featureCard {
+  background-color: white;
+  width: 300px;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+
+  box-shadow: 0 12px 35px rgba(40, 35, 75, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(40, 35, 75, 0.25);
+}
+
+.teamSection {
+  background-color: #f3f1fb;
+  padding: 3.5rem 2.5rem;
+  box-shadow: 0 10px 30px rgba(111, 85, 214, 0.4);
+  text-align: center;
+}
+
+.teamIntro {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+  color: #3b2c57;
+}
+
+.teamMembersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.teamMemberCard {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(111, 85, 214, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.teamMemberCard img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #6e57d0;
+  box-shadow: 0 10px 30px rgba(111, 85, 214, 0.4);
+  margin-bottom: 1.2rem;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.teamMemberCard:hover img {
+  border-color: #b38feb;
+  transform: scale(1.03);
+}
+
+.actionSection {
+  background: linear-gradient(135deg, #b38feb, #6e57d0);
+  color: #e0dffb;
+  padding: 3.5rem 2.5rem;
+  text-align: center;
+  border-radius: 1.8rem;
+  box-shadow: 0 10px 30px rgba(111, 85, 214, 0.4);
+  max-width: 90vw;
+
+  margin: 3rem auto;
+}
+
+.contactButton {
+  background-color: white;
+  color: #6e57d0;
+  padding: 1rem 2.5rem;
+  border-radius: 1.2rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: 2px solid #6e57d0;
+  margin-bottom: 3rem;
+}
+
+.contactButton:hover {
+  background-color: #6e57d0;
+  color: white;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .missionContent,
+  .storyContent {
+    padding-right: 0;
+  }
+
+  .missionSection,
+  .storySection {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .visionImage img,
+  .storyImage img {
+    height: 260px;
+  }
+
+  .featuresGrid {
+    align-items: center;
+  }
+
+  .teamMembersGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .featureCard {
+    max-width: 90vw;
+  }
+}
+
+body.darkMode .missionSection h2,
+body.darkMode .storySection h2,
+body.darkMode .featuresSection h2,
+body.darkMode .teamSection h2,
+body.darkMode .actionSection h2,
+body.darkMode .featuresSection h3,
+body.darkMode .teamSection h4 {
+  color: #d4c2ff;
+}
+
+body.darkMode .heroSection {
+  background: linear-gradient(135deg, #3a1c5f, #241245);
+  box-shadow: none;
+  color: #f0eaff;
+}
+
+body.darkMode .heroContent p {
+  color: #bca8e5;
+}
+
+body.darkMode .createButton {
+  background: linear-gradient(135deg, #ff3e9e, #a000ff);
+  color: #fff;
+}
+
+body.darkMode .createButton:hover {
+  background: linear-gradient(135deg, #6c4dc3, #4b3b9a);
+}
+
+body.darkMode .missionSection,
+body.darkMode .storySection {
+  background: none;
+  background-color: #1a1a1a;
+  box-shadow: none;
+}
+
+body.darkMode .missionContent,
+body.darkMode .storyContent {
+  color: #ddd0ff;
+}
+
+body.darkMode .visionImage img,
+body.darkMode .storyImage img {
+  box-shadow: none;
+}
+
+body.darkMode .missionContent p,
+body.darkMode .storyContent p {
+  color: #d0c6ef;
+}
+
+body.darkMode .featuresSection {
+  background-color: #1a1a1a;
+  box-shadow: none;
+}
+
+body.darkMode .featureCard {
+  background-color: #2d214a;
+  color: #e7dbff;
+}
+
+body.darkMode .teamSection {
+  background-color: #1a1a1a;
+  color: #e0d0ff;
+  box-shadow: none;
+}
+
+body.darkMode .teamIntro {
+  color: #d3c3f7;
+}
+
+body.darkMode .teamMemberCard img {
+  border-color: #d4b3ff;
+  box-shadow: none;
+}
+
+body.darkMode .teamMemberCard {
+  background-color: #202020;
+  color: #f2eaff;
+  box-shadow: none;
+}
+
+body.darkMode .actionSection {
+  background: linear-gradient(135deg, #341962, #21103f);
+  color: #f0eaff;
+  box-shadow: none;
+}
+
+body.darkMode .contactButton {
+  background-color: #f5f5f5;
+  color: #4b308c;
+  border: 2px solid #c7a8ff;
+}
+
+body.darkMode .contactButton:hover {
+  background-color: #c7a8ff;
+  color: #1e003e;
+}

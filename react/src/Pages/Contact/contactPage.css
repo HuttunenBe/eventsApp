@@ -1,0 +1,287 @@
+.contactBody {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0dffb, #f5f3ff);
+  display: flex;
+}
+
+.contactPageContainer {
+  background: white;
+  max-width: 1200px;
+  width: 90%;
+  margin: 3rem auto;
+  padding: 3.5rem 2.5rem;
+  border-radius: 2.5rem;
+  box-shadow: 0 10px 30px rgba(111, 85, 214, 0.4);
+}
+
+.contactPageContainer h1 {
+  color: #9d4edd;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.contactPageContainer p {
+  max-width: 700px;
+  text-align: center;
+  color: #440491;
+  line-height: 1.7;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 auto 2.5rem;
+}
+
+.contactContent {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.contactForm,
+.contactInfo {
+  flex: 1 1 35%;
+  max-width: 45%;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  padding: 2.5rem 2.2rem;
+  background-color: rgb(249, 247, 255);
+  border-radius: 1.5rem;
+  color: #3b2c57b9;
+  gap: 1rem;
+  border: 2px solid #c435f093;
+  box-shadow: 0 10px 30px rgba(111, 85, 214, 0.4);
+}
+
+.contactForm label {
+  font-size: 1rem;
+  color: #b51a71;
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+}
+
+.contactForm input,
+.contactForm textarea {
+  background: white;
+
+  font-size: 1rem;
+  padding: 0.9rem 1.2rem;
+  border: 2px solid #c435f055;
+  border-radius: 1.2rem;
+  color: #3b2c57;
+  transition: border-color 0.3s ease;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  border-color: #d16ba5;
+  box-shadow: 0 0 0 3px rgba(209, 107, 165, 0.2);
+}
+
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+  color: #ba92c9;
+  opacity: 0.8;
+}
+
+.contactForm button {
+  border: none;
+  background: linear-gradient(to right, #ff4d6d, #b51a71);
+  color: white;
+  padding: 1rem 1.5rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.contactForm button:hover {
+  background: linear-gradient(to right, #c9184a, #a046c5);
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(255, 77, 109, 0.4);
+}
+
+.contactForm .successMessage {
+  text-align: center;
+  background-color: #f3defa;
+  border: 1px solid #e6b8f4;
+  font-weight: 600;
+  color: #7e2d92;
+  margin-top: 1.5rem;
+  padding: 1rem 1.2rem;
+  border-radius: 1.2rem;
+  font-size: 1rem;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.9rem;
+  background: linear-gradient(15deg, #f26990, #7c37ec);
+  padding: 2.5rem 2.2rem;
+  color: white;
+  border-radius: 1.5rem;
+  border: 2px solid #cfa7e5;
+  box-shadow: 0 10px 30px rgba(111, 85, 214, 0.4);
+}
+
+.contactInfo p {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.contactInfo p strong {
+  color: #ffccf9;
+  font-weight: 700;
+}
+
+.contactInfo a {
+  color: #ffb6e5;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  word-break: break-word;
+}
+
+.contactInfo a:hover {
+  text-decoration: underline;
+  color: #ffe3f1;
+}
+
+.contactInfo h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: white;
+  font-weight: 800;
+  font-size: 2.2rem;
+}
+
+@media (max-width: 960px) {
+  .contactContent {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactForm,
+  .contactInfo {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .contactPageContainer {
+    width: 95vw;
+  }
+
+  .contactContent {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+body.darkMode .contactBody {
+  background: none;
+  background-color: rgb(8, 8, 8);
+  color: #eee9f8;
+}
+
+body.darkMode .contactPageContainer {
+  background: none;
+  background-color: rgb(27, 27, 27);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+body.darkMode .contactPageContainer h1 {
+  color: #d1b3ff;
+}
+
+body.darkMode .contactPageContainer p {
+  color: #cdbdf0;
+}
+
+body.darkMode .contactForm {
+  background-color: #1c1c1c;
+  border: 1px solid #7c6ca8;
+  color: #eee9f8;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+body.darkMode .contactForm label {
+  color: #c5a3ff;
+}
+
+body.darkMode .contactForm input,
+body.darkMode .contactForm textarea {
+  background-color: #2c2c2c;
+
+  color: #f5f0ff;
+  border: 2px solid #9b7edc;
+}
+
+body.darkMode .contactForm input::placeholder,
+body.darkMode .contactForm textarea::placeholder {
+  color: #bba2df;
+}
+
+body.darkMode .contactForm input:focus,
+body.darkMode .contactForm textarea:focus {
+  border-color: #ff7a9d;
+  box-shadow: 0 0 0 3px rgba(255, 77, 109, 0.3);
+}
+
+body.darkMode .contactForm button {
+  color: white;
+  background: linear-gradient(135deg, #ff4d6d, #370886);
+}
+
+body.darkMode .contactForm button:hover {
+  background: linear-gradient(135deg, #e53872, #0d3e5a);
+  box-shadow: none;
+}
+
+body.darkMode .contactInfo {
+  background: none;
+  background-color: #232323;
+  border: 2px solid #8c75d4;
+  color: #eee9f8;
+  box-shadow: none;
+}
+
+body.darkMode .contactForm .successMessage {
+  background-color: #3d2f63;
+  border: 1px solid #a279e7;
+  color: #dabfff;
+}
+
+body.darkMode .contactInfo h2 {
+  color: #d6b3ff;
+}
+
+body.darkMode .contactInfo p {
+  color: #cbb8f3;
+}
+
+body.darkMode .contactInfo p strong {
+  color: #d5b9ff;
+}
+
+body.darkMode .contactInfo a {
+  color: #c99dff;
+}
+
+body.darkMode .contactInfo a:hover {
+  color: #f7b2e6;
+}

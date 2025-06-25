@@ -1,0 +1,178 @@
+.footer {
+  background: linear-gradient(135deg, #ff69b4 0%, #8a2be2 100%);
+  text-align: center;
+  color: #ffffff;
+  padding: 2.5rem 4rem;
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.footerLinks a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footerLinks a:hover {
+  color: #a61983;
+}
+
+.contactInfoSection h2 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contactInfoWrapper {
+  display: grid;
+  text-align: left;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.contactInfoSection {
+  max-width: 900px;
+  padding: 2rem 0;
+  margin: 0 auto;
+}
+
+.contactIntro {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #ffe4f2;
+}
+
+.contactCard {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.2rem;
+  border-radius: 1rem;
+  box-shadow: 0 15px 35px rgba(106, 17, 203, 0.4);
+  transition: transform 0.2s ease;
+}
+
+.contactCard:hover {
+  transform: translateY(-5px);
+}
+
+.contactCard h4 {
+  color: #ffb3ec;
+  margin: 0;
+  font-size: 1.1rem;
+  margin-top: 0.2rem;
+}
+
+.contactCard p,
+.contactCard a {
+  color: #fff;
+  margin: 0.5rem;
+  line-height: 1.2;
+  word-wrap: break-word;
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+#subscribeHeader {
+  font-size: 1.6rem;
+  margin-top: 3rem;
+}
+
+.footer form button {
+  background-color: #ffffff;
+  color: #8a2be2;
+
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.7rem;
+  font-weight: 700;
+}
+
+.footer form button:hover {
+  background-color: #8a2be2;
+  color: white;
+}
+
+.footer form input {
+  width: 100%;
+  max-width: 280px;
+  padding: 0.6rem 0.9rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 0.8rem;
+}
+
+body.darkMode .footer {
+  background: rgba(30, 30, 30, 0.85);
+  color: #f4baed;
+}
+
+body.darkMode .footerLinks a {
+  color: #daa4dc;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+body.darkMode .footerLinks a:hover {
+  color: #ed44b8;
+  transform: scale(1.1);
+}
+
+body.darkMode .contactInfoSection h2 {
+  color: #f4cbf5;
+}
+
+body.darkMode .contactIntro {
+  color: #999999;
+}
+
+body.darkMode .contactCard h4 {
+  color: #cccccc;
+  color: #f9f6f9;
+}
+
+body.darkMode .contactCard p,
+body.darkMode .contactCard a {
+  color: #ffffff;
+}
+
+body.darkMode .contactCard {
+  box-shadow: none;
+  background: rgb(40, 40, 40);
+}
+
+body.darkMode .footer form input {
+  background-color: #373737;
+  color: #ffffff;
+}
+
+body.darkMode .footer form button {
+  background-color: #555555;
+  color: #eeeeee;
+}
+
+body.darkMode .footer form button:hover {
+  background-color: #f70bd3;
+  color: #ffffff;
+}
