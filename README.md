@@ -11,7 +11,13 @@ Users can explore, add, edit and delete events, with all changes saved to a data
 *  **🧾 User Authentication** – Login/register system (coming soon!)  
 *  **🖼️ Event Details** – View full details add edit and delete events  
 *  **🌗 Dark & Light Mode** – Toggle theme. Saved in local storage  
-*  **⭐ Favorite Events** – Save favorites locally in local storage  
+*  **⭐ Favorite Events** – Save favorites locally in local storage
+*  **📱 Mobile-Friendly Design** – Responsive layout
+*   **📜 Back to Top Button** – Easy scroll back
+*   **🎠 Popular Events Slider** – Scrollable slider for popular events
+
+*   Working on: Map, Weather, User Authentication
+
 
 
 ______________________
