@@ -1,0 +1,196 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1rem 2rem;
+
+  box-shadow: 0 8px 20px rgba(131, 56, 236, 0.15);
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-style: italic;
+  background: linear-gradient(135deg, #f8ccfc, #daf3ff);
+  text-decoration: none;
+  border: 3px solid rgb(239, 140, 255);
+  padding: 1rem;
+  border-radius: 50%;
+  letter-spacing: 1px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #9a28e6;
+}
+
+.logo:hover {
+  color: #ff3386;
+}
+
+.desktopMenu a {
+  text-decoration: none;
+   font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.6rem 0.9rem;
+  font-size: 1rem;
+  border-radius: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.desktopMenu ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.desktopMenu a:hover,
+.desktopMenu a.active {
+  background: linear-gradient(135deg, #ff006e, #8338ec);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(255, 0, 110, 0.3);
+}
+
+#menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #3a0ca3;
+  transition: transform 0.3s ease;
+}
+
+#menuToggle:hover {
+  transform: scale(1.1);
+}
+
+.mobileMenu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: -100%;
+  width: 30%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.979);
+  padding: 2rem;
+
+  border-radius: 2rem;
+  box-shadow: 0 8px 20px rgba(131, 56, 236, 0.15);
+  transition: right 0.4s ease-in-out;
+  z-index: 9000;
+}
+
+.mobileMenu.open {
+  right: 0;
+}
+
+.mobileNav ul {
+  padding: 0;
+  margin: 0.9 0.2rem;
+  list-style: none;
+}
+
+.mobileNav a {
+  color: #5a189a;
+  padding: 0.6rem 1.2rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.mobileNav li {
+  margin-bottom: 2.9rem;
+}
+
+.mobileNav a:hover,
+.mobileNav a.active {
+  background: linear-gradient(135deg, #ff006e, #8338ec);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(255, 0, 110, 0.3);
+}
+
+.material-icons {
+  font-size: 1.9rem;
+}
+
+#closeMenu {
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  color: #3a0ca3;
+  transition: transform 0.3s ease;
+}
+
+#closeMenu:hover {
+  transform: rotate(90deg);
+}
+
+@media (max-width: 880px) {
+  .desktopMenu {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: block;
+    width: 50vw;
+  }
+
+  #menuToggle {
+    display: block;
+  }
+}
+
+body.darkMode .header {
+  background: rgba(30, 30, 30, 0.85);
+  box-shadow: none;
+}
+
+body.darkmode .logo {
+  color: #ffffff;
+  border: 2px solid rgb(200, 107, 214);
+}
+
+body.darkMode .desktopMenu a {
+  color: #e0caff;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+body.darkMode .desktopMenu a:hover {
+  background: linear-gradient(135deg, #c77dff, #7209b7);
+  box-shadow: none;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+body.darkMode .desktopMenu a.active {
+  background: linear-gradient(135deg, #c77dff, #7209b7);
+  box-shadow: none;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+body.darkMode #menuToggle {
+  color: #e0caff;
+}
+
+body.darkMode .mobileNav a {
+  color: #e0caff;
+}
+
+body.darkMode .mobileNav a:hover,
+body.darkMode .mobileNav a.active {
+  background: linear-gradient(135deg, #c77dff, #7209b7);
+  box-shadow: 0 4px 10px rgba(199, 125, 255, 0.3);
+  color: #fff;
+}
+
+body.darkMode .mobileMenu {
+  background: rgba(25, 25, 25, 0.95);
+  box-shadow: none;
+}
+
+body.darkMode #closeMenu {
+  color: #e0caff;
+}

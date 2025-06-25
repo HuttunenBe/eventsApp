@@ -1,0 +1,251 @@
+.tickets {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.message {
+  background: linear-gradient(135deg, #f9e6ff, #d9bbf9);
+  border-radius: 1.5rem;
+  padding: 1.5rem 2rem;
+  color: #5a189a;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 30px rgba(217, 187, 249, 0.4);
+}
+
+.message:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(155, 81, 224, 0.4);
+}
+
+.secondary {
+  margin-top: 1rem;
+  display: inline-block;
+  font-weight: 700;
+  color: #7209b7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+}
+
+.secondary:hover {
+  color: #9d4edd;
+}
+
+.showButtons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.showButtons button {
+  background: linear-gradient(135deg, #d66bb9, #6c5ad8);
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.8rem 2.2rem;
+  border-radius: 2rem;
+  border: none;
+  height: 50px;
+  box-shadow: 0 8px 30px rgba(217, 187, 249, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.showButtons button:hover {
+  background: linear-gradient(135deg, #9d4edd, #7e4bff);
+  box-shadow: 0 8px 20px rgba(126, 75, 255, 0.5);
+}
+
+.categorySection h2 {
+  font-size: 2.2rem;
+  color: rgb(80, 29, 142);
+  margin-bottom: 3rem;
+  font-weight: 800;
+}
+
+.categorySection {
+  max-width: 1100px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background-color: #e7cdff90;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 30px rgba(217, 187, 249, 0.4);
+  color: white;
+}
+
+.categoryButtons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.categoryButtons button {
+  background: linear-gradient(135deg, hsl(290, 92%, 61%), #4428e3);
+ 
+  font-weight: 700;
+  font-size: 1.05rem;
+  height: 56px;
+  padding: 0.5rem 1.4rem;
+  border-radius: 2.5rem;
+  box-shadow: 0 8px 30px rgba(217, 187, 249, 0.4);
+border:none;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.categoryButtons button:hover {
+  background: rgb(11, 2, 92);
+    background: linear-gradient(150deg, hsl(321, 92%, 61%), #4428e3);
+ 
+  box-shadow: 0 12px 30px rgba(111, 71, 217, 0.4);
+}
+
+.eventSliderWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.arrowButton {
+  background: #ff4fa1;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 79, 161, 0.6);
+}
+
+.arrowButton:hover {
+  background: #d6338a;
+}
+
+.eventSlider,
+.expandedEventRow {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.eventCard
+ {
+  flex: 0 0 auto;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.eventCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(155, 81, 224, 0.3);
+}
+
+@media (max-width: 600px) {
+  .tickets,
+  .showButtons,
+  .categoryButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .message {
+    width: 90%;
+  }
+
+  .categoryButtons button {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+body.darkMode .message {
+  background: linear-gradient(135deg, #3c2c4f, #5c3a78);
+  color: #e9d9ff;
+  background-color: #1a1a1a;
+  box-shadow: 0 6px 18px rgba(200, 160, 255, 0.2);
+}
+
+body.darkMode .message:hover {
+  box-shadow: 0 12px 30px rgba(200, 160, 255, 0.4);
+}
+
+body.darkMode .secondary {
+  color: #cfaeff;
+}
+
+body.darkMode .secondary:hover {
+  color: #f2caff;
+}
+
+body.darkMode .showButtons button,
+body.darkMode .categoryButtons button {
+  background: linear-gradient(135deg, #b86bce, #7e60d8);
+
+  box-shadow: none;
+  color: #ffffff;
+}
+
+body.darkMode .showButtons button:hover,
+body.darkMode .categoryButtons button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #e0cfff;
+  box-shadow: 0 12px 30px rgba(180, 130, 255, 0.5);
+}
+
+body.darkMode .categorySection {
+  background: none;
+  color: #fff;
+  background-color: #232323;
+  box-shadow: none;
+}
+
+body.darkMode .categorySection h2 {
+  color: #f3e9ff;
+}
+
+body.darkMode .eventCard,
+body.darkMode .expandedEventCard {
+  background: #161616;
+  color: #e6d9ff;
+  box-shadow: none;
+}
+
+body.darkMode .eventTicket {
+  background: #1f1f1f;
+  color: #e6d9ff;
+  box-shadow: none;
+}
+
+body.darkMode .eventCard:hover,
+body.darkMode .expandedEventCard:hover {
+  box-shadow: 0 12px 24px rgba(200, 160, 255, 0.3);
+}
+
+body.darkMode .arrowButton {
+  background: #e05da7;
+  box-shadow: 0 4px 10px rgba(255, 160, 230, 0.6);
+}
+
+body.darkMode .arrowButton:hover {
+  background: #c5388e;
+}
+

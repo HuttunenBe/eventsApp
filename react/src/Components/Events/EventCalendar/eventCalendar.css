@@ -1,0 +1,168 @@
+.calendarWrapper {
+  max-width: 1000px;
+  background-color: #e2cfff46;
+  border-radius: 2rem;
+  margin: 2rem auto;
+  padding: 1rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 40px rgba(255, 105, 180, 0.25);
+}
+
+.fc-daygrid-event {
+  background: #e770d1;
+  color: white;
+  padding: 0.5rem 0.5rem;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 12px 40px rgba(255, 105, 180, 0.25);
+  transition: background-color 0.2s ease;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.fc-daygrid-event:hover {
+  background: #ff5994;
+}
+
+.fc-toolbar-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #d100d1;
+}
+
+.fc {
+  color: #4c035d;
+}
+
+.fc-button {
+  background: linear-gradient(to right, #a200b7, #ff4d9d);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.fc-button:hover {
+  background: linear-gradient(to right, #d44cf7, #ff6fa9);
+  transform: scale(1.05);
+}
+
+.calendarModal {
+  position: fixed;
+  width: 90%;
+  background: linear-gradient(to bottom right, #fff0fb, #fdf3f9);
+  max-width: 520px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #4c035d;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 2rem;
+
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 40px rgba(255, 105, 180, 0.25);
+  z-index: 9999;
+  animation: fadeInScale 0.35s ease-in-out;
+}
+
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 0, 50, 0.4);
+  backdrop-filter: blur(3px);
+  z-index: 6;
+}
+
+.calendarModal p {
+  font-size: 1.05rem;
+  margin: 0.4rem 0;
+  line-height: 1.6;
+}
+
+.calendarModal h3 {
+  font-size: 1.7rem;
+  color: #d100d1;
+
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.calendarModal button {
+  background: linear-gradient(to right, #a200b7, #ff4d9d);
+  color: white;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 0.7rem;
+  font-weight: 700;
+  transition: background 0.3s ease, transform 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.calendarModal button::after {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: left 0.5s ease;
+}
+
+.calendarModal button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(to right, #d44cf7, #ff6fa9);
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+body.darkMode .calendarWrapper {
+  background: #242424;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: none;
+  color: #f5f5f5;
+}
+
+body.darkMode .fc {
+  color: #eb56f0;
+}
+
+body.darkMode .fc-daygrid-event:hover {
+  background: #c31cbb;
+}
+
+body.darkMode .fc-button:hover {
+  background: linear-gradient(to right, #ff9dbb, #ff5c8a);
+  transform: scale(1.05);
+}
+
+body.darkMode .calendarModal {
+  background: #2c2c2c;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f0f0f0;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+body.darkMode .calendarModal p {
+  color: #e5e5e5;
+}
+
+body.darkMode .calendarModal h3 {
+  color: #ff9dbb;
+}
+
+body.darkMode .modalBackdrop {
+  background: rgba(0, 0, 0, 0.7);
+}

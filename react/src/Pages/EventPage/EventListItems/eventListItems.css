@@ -1,0 +1,84 @@
+.eventTicket {
+  max-width: 300px;
+  border-radius: 1rem;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 8px 30px rgba(124, 32, 223, 0.4);
+ border: 1px rgba(179, 0, 255, 0.274) solid;
+  color: #59189a43;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.eventTicket:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(155, 81, 224, 0.25);
+}
+
+.eventTicket p {
+  line-height: 1.6;
+  margin: 0;
+  font-size: 1rem;
+
+  color: #4b2a6c;
+}
+
+.editImage {
+  width: 150px;
+  height: 150px;
+   position: relative;
+  top: -10px;  
+  border-radius: 50%;
+  object-fit: cover;
+  border: white 3px solid;
+  box-shadow: 0 8px 30px rgba(217, 187, 249, 0.4);
+  margin-bottom: 0.8rem;
+}
+
+.eventTicket button {
+  background-color: #d66bb9;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 0.6rem;
+  border: none;
+  border-radius: 4rem;
+  padding: 0.4rem 1.2rem;
+
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.eventTicket button:hover {
+  background-color: #9d4edd;
+  transform: scale(1.05);
+}
+
+body.darkMode .eventTicket {
+  background: linear-gradient(135deg, #3d2c54, #5e3d85);
+  color: #f0e6ff;
+  box-shadow: 0 8px 30px rgba(217, 187, 249, 0.4);
+}
+
+body.darkMode .eventTicket:hover {
+  box-shadow: 0 10px 20px rgba(200, 160, 255, 0.3);
+}
+
+body.darkMode .eventTicket p {
+  color: #d6c2f2;
+}
+
+body.darkMode button {
+  background-color: #a25ccf;
+  color: #ffffff;
+}
+
+body.darkMode button:hover {
+  background-color: #d16ba5;
+}
+
+body.darkMode .editImage {
+  box-shadow: none;
+  border-radius: 4rem 0;
+}
+
+
