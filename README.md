@@ -33,3 +33,6 @@ ______________________
 ### 🖥️ Backend
 * Laravel – RESTful API
 * MySQL – database
+
+## 🖼️ App Preview
+![GitHub Events App](./githubEvents.png)
