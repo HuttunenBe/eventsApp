@@ -34,5 +34,5 @@ ______________________
 * Laravel – RESTful API
 * MySQL – database
 
-## 🖼️ App Preview
+# 🖼️ App Preview
 ![GitHub Events App](./githubEvents.png)
