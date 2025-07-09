@@ -38,3 +38,56 @@ ______________________
 # 🖼️ App Preview
 
 ![GitHub Events App](./githubEvents.png)
+________
+
+## Setup Guide
+
+### 📦 Clone the Repository
+- git clone https://github.com/HuttunenBe/eventsApp.git
+- cd eventsApp
+
+### 🔧 Laravel Setup 
+- composer install
+- cp .env.example .env
+- php artisan key:generate
+
+🛠 MySQL Database Setup
+1. Create a MySQL database 
+2. Update the .env file with your credentials:
+
+* DB_CONNECTION=mysql
+* DB_HOST=127.0.0.1
+* DB_PORT=3306
+* DB_DATABASE=your_db
+* DB_USERNAME=your_username
+* DB_PASSWORD=your_password
+
+Run migrations:
+- php artisan migrate
+- php artisan config:clear
+- php artisan serve
+
+### ⚙️ CORS Configuration (Laravel)
+* In cors.php file allowed origin add your own React URL:
+    'allowed_origins' => [
+        'http://localhost:5176'
+    ]<php>
+
+After run:
+* php artisan config:clear
+
+### ⚛️ React Setup 
+* npm install
+* npm run dev
+
+### 🌍 React .env Setup
+* Create a .env file in the root of your React app:
+* Add your Laravel url: VITE_BASE_URL=http://127.0.0.1:8000/
+
+### ➕ React Packages
+* npm install axios
+* npm install react-spinners
+* npm install react-toggle-dark-mode
+* npm install react-scroll-to-top
+* npm install @fullcalendar/react @fullcalendar/daygrid
+* npm install @fullcalendar/timegrid @fullcalendar/interaction
