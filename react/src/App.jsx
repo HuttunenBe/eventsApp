@@ -20,7 +20,7 @@ function App() {
 
         <main>
           <Routes>
-            <Route path="/" element={<FrontPage />} />
+            <Route path="/" element={<Frontpage />} />
             <Route path="/authentication" element={<UserAuthentication />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<ContactPage />} />
