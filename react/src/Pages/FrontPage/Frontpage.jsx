@@ -2,7 +2,7 @@ import { useNavigate } from "react-router";
 import popularEvents from "./PopularEventsData";
 import { useRef } from "react";
 import CountDown from "./CountDown";
-import "./frontPage.css";
+import "./frontpage.css";
 
 const FrontPage = () => {
   const navigate = useNavigate();
