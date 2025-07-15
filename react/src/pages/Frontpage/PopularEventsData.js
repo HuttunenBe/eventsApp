@@ -1,4 +1,4 @@
-const popularEvents = [
+const PopularEventsData = [
   {
     id: 1,
     title: "Dance Festival",
@@ -43,4 +43,4 @@ const popularEvents = [
   },
 ];
 
-export default popularEvents;
+export default PopularEventsData;

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import popularEvents from "./PopularEventsData";
+import PopularEventsData from "./PopularEventsData";
 import { useRef } from "react";
 import CountDown from "./CountDown";
 import "./frontpage.css";
@@ -57,7 +57,7 @@ const Frontpage = () => {
             id="popularSlider"
             ref={sliderRef}
           >
-            {popularEvents.map((event) => (
+            {PopularEventsData.map((event) => (
               <div
                 key={event.id}
                 className="popularEventCard"
