@@ -1,16 +1,16 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router";
-import Frontpage from "./Pages/Frontpage/Frontpage";
-import About from "./Pages/About/About";
-import AddEvent from "./Pages/AddEvent/AddEvent";
-import EventList from "./Pages/EventPage/EventListItems/EventList";
+import Frontpage from "./pages/Frontpage/Frontpage";
+import About from "./pages/About/About";
+import AddEvent from "./pages/AddEvent/AddEvent";
+import EventList from "./pages/EventPage/EventListItems/EventList";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
-import EventDetails from "./Pages/EventDetailsPage/EventDetails";
-import EventContainer from "./Pages/EventPage/EventContainer/EventContainer";
+import EventDetails from "./pages/EventDetailsPage/EventDetails";
+import EventContainer from "./pages/EventPage/EventContainer/EventContainer";
 import "./App.css";
-import UserAuthentication from "./Pages/UserAuthentication/UserAuthentication";
-import ContactPage from "./Pages/Contact/ContactPage";
+import UserAuthentication from "./pages/UserAuthentication/UserAuthentication";
+import ContactPage from "./pages/Contact/ContactPage";
 
 function App() {
   return (
