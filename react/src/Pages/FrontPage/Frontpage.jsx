@@ -4,7 +4,7 @@ import { useRef } from "react";
 import CountDown from "./CountDown";
 import "./frontpage.css";
 
-const FrontPage = () => {
+const Frontpage = () => {
   const navigate = useNavigate();
   const sliderRef = useRef(null);
 
@@ -160,4 +160,4 @@ const FrontPage = () => {
   );
 };
 
-export default FrontPage;
+export default Frontpage;
