@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import EventCalendar from "../../../Components/Events/EventCalendar/EventCalendar";
+import EventCalendar from "../EventCalendar/EventCalendar";
 import EventListView from "../EventListView/EventListView";
 import useAxios from "../../../Hooks/UseAxios";
 import faqData from "./faqData";

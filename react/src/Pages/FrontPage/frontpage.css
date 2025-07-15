@@ -282,8 +282,13 @@
 .sliderWrapper {
   display: flex;
   align-items: center;
-
+  justify-content: center;
   max-width: 100vw;
+}
+
+.arrowButton {
+  padding: 0.3rem 0.8rem;
+  margin: 0 0.5rem;
 }
 
 .arrowButton:hover {
@@ -462,15 +467,4 @@ body.darkMode .popularEventCard p {
 
 body.darkMode .arrowButton:hover {
   background: #bb86fc;
-}
-
-.arrowButton {
-  padding: 0.3rem 0.8rem;
-  margin: 0 0.5rem;
-}
-
-.sliderWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

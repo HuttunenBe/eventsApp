@@ -1,5 +1,5 @@
-import WeatherModal from "../Map&Weather/WeatherModal";
-import MapModal from "../Map&Weather/MapModal";
+import WeatherModal from "../../Components/Events/Map&Weather/WeatherModal";
+import MapModal from "../../Components/Events/Map&Weather/MapModal";
 import "./eventDetails.css";
 
 const EventDetailsContent = ({ event, navigate }) => {

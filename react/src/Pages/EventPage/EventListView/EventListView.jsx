@@ -1,8 +1,8 @@
 import { useState, useRef } from "react";
 import { Link } from "react-router";
 import EventList from "../EventListItems/EventList";
-import GetEventEmoji from "../../../Components/Events/EventEmojisAndImages/EventEmoji";
-import EventCategoryButtons from "../EventCategoryButtons";
+import GetEventEmoji from "../../../Components/Events/EventEmoji/EventEmoji";
+import EventCategoryButtons from "../../../Components/Events/EventCategoryButtons";
 import "./eventList.css";
 
 const EventListView = ({

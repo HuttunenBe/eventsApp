@@ -95,6 +95,15 @@ body {
   transform: scale(1.03);
 }
 
+.error {
+  color: #e53872;
+  padding-left: 0.5rem;
+  font-size: 0.8rem;
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem;
+}
+
+
 .addEventContact {
   text-align: center;
   margin: 1.5rem 0rem;
@@ -112,13 +121,6 @@ body {
   color: #a61e4d;
 }
 
-.error {
-  color: #e53872;
-  padding-left: 0.5rem;
-  font-size: 0.8rem;
-  margin-top: -0.5rem;
-  margin-bottom: -0.5rem;
-}
 
 body.darkMode .addEventBody {
   background: linear-gradient(135deg, #1a1a1a, #151515);
@@ -131,15 +133,17 @@ body.darkMode .addEventGreeting {
   box-shadow: none;
 }
 
-body.darkMode .addEventFormContainer h2 {
-  color: #e39dff;
-}
-
 body.darkMode .addEventFormContainer {
   background-color: #1f1f1f;
   color: #f0f0f0;
   box-shadow: none;
 }
+
+body.darkMode .addEventFormContainer h2 {
+  color: #e39dff;
+}
+
+
 
 body.darkMode .addEventFormContainer input,
 body.darkMode .addEventFormContainer textarea,

@@ -1,6 +1,6 @@
 import "./frontPage.css";
 import { useNavigate } from "react-router";
-import popularEvents from "./popularEventsData";
+import popularEvents from "./PopularEventsData";
 import { useRef } from "react";
 import CountDown from "./CountDown";
 

@@ -1,4 +1,4 @@
-.footer {
+footer {
   background: linear-gradient(135deg, #ff69b4 0%, #8a2be2 100%);
   text-align: center;
   color: #ffffff;
@@ -29,6 +29,12 @@
   color: #a61983;
 }
 
+.contactInfoSection {
+  max-width: 900px;
+  padding: 2rem 0;
+  margin: 0 auto;
+}
+
 .contactInfoSection h2 {
   margin-bottom: 2rem;
   font-size: 1.8rem;
@@ -36,23 +42,17 @@
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
+.contactIntro {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #ffe4f2;
+}
+
 .contactInfoWrapper {
   display: grid;
   text-align: left;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
-}
-
-.contactInfoSection {
-  max-width: 900px;
-  padding: 2rem 0;
-  margin: 0 auto;
-}
-
-.contactIntro {
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  color: #ffe4f2;
 }
 
 .contactCard {
@@ -99,6 +99,15 @@
   margin-top: 3rem;
 }
 
+.footer form input {
+  width: 100%;
+  max-width: 280px;
+  padding: 0.6rem 0.9rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 0.8rem;
+}
+
 .footer form button {
   background-color: #ffffff;
   color: #8a2be2;
@@ -111,15 +120,6 @@
 .footer form button:hover {
   background-color: #8a2be2;
   color: white;
-}
-
-.footer form input {
-  width: 100%;
-  max-width: 280px;
-  padding: 0.6rem 0.9rem;
-  border: none;
-  font-size: 1rem;
-  border-radius: 0.8rem;
 }
 
 body.darkMode .footer {
@@ -146,6 +146,11 @@ body.darkMode .contactIntro {
   color: #999999;
 }
 
+body.darkMode .contactCard {
+  box-shadow: none;
+  background: rgb(40, 40, 40);
+}
+
 body.darkMode .contactCard h4 {
   color: #cccccc;
   color: #f9f6f9;
@@ -154,11 +159,6 @@ body.darkMode .contactCard h4 {
 body.darkMode .contactCard p,
 body.darkMode .contactCard a {
   color: #ffffff;
-}
-
-body.darkMode .contactCard {
-  box-shadow: none;
-  background: rgb(40, 40, 40);
 }
 
 body.darkMode .footer form input {
