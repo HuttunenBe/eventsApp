@@ -16,7 +16,12 @@ Users can explore, add, edit and delete events, with all changes saved to a data
 *   📜 Back to Top Button – Easy scroll back
 *   🎠 Popular Events Slider – Scrollable slider for popular events
 * ⏳ Loading Indicators – On multiple pages using React Spinners
-*   Working on: Map, Weather, User Authentication, Loading,
+* ☁️ Weather Display – Real time weather information for event locations via external API
+* 🗺️ Map Display – Google Maps for event locations
+*   Working on: CSS, User Authentication 
+
+
+
 
 ______________________
 
