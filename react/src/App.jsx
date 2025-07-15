@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router";
 import ScrollToTop from "react-scroll-to-top";
-import FrontPage from "./Pages/FrontPage/Frontpage";
+import FrontPage from "./Pages/FrontPage/FrontPage";
 import About from "./Pages/About/About";
 import AddEvent from "./Pages/AddEvent/AddEvent";
 import EventList from "./Pages/EventPage/EventListItems/EventList";
