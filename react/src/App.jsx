@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router";
-import FrontPage from "./Pages/FrontPage/FrontPage";
+import Frontpage from "./Pages/Frontpage/Frontpage";
 import About from "./Pages/About/About";
 import AddEvent from "./Pages/AddEvent/AddEvent";
 import EventList from "./Pages/EventPage/EventListItems/EventList";
