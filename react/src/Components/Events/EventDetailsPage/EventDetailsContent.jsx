@@ -1,5 +1,6 @@
+import WeatherModal from "../Map&Weather/WeatherModal";
+import MapModal from "../Map&Weather/MapModal";
 import "./eventDetails.css";
-
 
 const EventDetailsContent = ({ event, navigate }) => {
   return (
@@ -21,10 +22,15 @@ const EventDetailsContent = ({ event, navigate }) => {
         <div className="eventInfo">
           <p>{event.description}</p>
           <p>
-            <strong>Date: {event.date}</strong>
+            <strong>Date:</strong> {event.date}
           </p>
           <p>
-            <strong>Location:</strong> {event.location}
+            <strong>Location:</strong>
+            <MapModal location={event.location} />
+          </p>
+          <p>
+            <strong>Weather:</strong>
+            <WeatherModal location={event.location} showCloseButton={false} />
           </p>
           <p>
             <strong>Price:</strong> €{event.price}
@@ -53,7 +59,6 @@ const EventDetailsContent = ({ event, navigate }) => {
             "An unforgettable experience with amazing vibes and fantastic
             entertainment!"
           </li>
-
           <li>
             <img
               src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
@@ -77,7 +82,6 @@ const EventDetailsContent = ({ event, navigate }) => {
       <div className="eventSafetyFaqContainer">
         <div className="eventSafety">
           <h3>Health & Safety</h3>
-
           <p>
             Your safety is our top priority. We diligently ensure that every
             event adheres to strict health and safety protocols, including

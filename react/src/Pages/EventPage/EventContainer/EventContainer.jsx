@@ -55,7 +55,7 @@ const EventContainer = () => {
           {showCalendar ? "Switch to List View" : "Switch to Calendar View"}
         </button>
 
-        {error && <p className="error">{error}</p>}
+        {error && <p className="errorMessage">{error}</p>}
 
         {loading ? (
           <Loading />
@@ -77,7 +77,7 @@ const EventContainer = () => {
         <section className="benefitsSection">
           <h2>Why Use EventFinder?</h2>
           <div className="benefitsGrid">
-            {/* Example cards below */}
+
             <div className="benefitCard">
               <img
                 src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"

@@ -31,20 +31,8 @@ function App() {
             <Route path="/events/:id/edit" element={<EventList />} />
           </Routes>
           <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            style={{
-              position: "fixed",
-              right: "1rem",
-              bottom: "1rem",
-
-              background: "linear-gradient(45deg, #e1649c, #8e44ad)",
-              color: "white",
-              padding: "1rem 1rem",
-              borderRadius: "5rem",
-              fontWeight: "700",
-              border: "none",
-              zIndex: 997,
-            }}
+            className="backToTop"
+            onClick={() => window.scrollTo({ top: 0 })}
           >
             Back to Top
           </button>

@@ -11,7 +11,6 @@
   background: linear-gradient(135deg, #e0dffb, #f5f3ff);
   line-height: 1;
   padding: 2rem;
-
   border-radius: 1rem;
   margin: 0 auto;
   margin-top: 3rem;
@@ -269,8 +268,6 @@ body.darkMode .eventSafety {
   background-color: #1c1c1c;
   color: #e2e2b7;
 }
-
-
 
 body.darkMode .goBackButton:hover {
   background-color: #3a3a3a;

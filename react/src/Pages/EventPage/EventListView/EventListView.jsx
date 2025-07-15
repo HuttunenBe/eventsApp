@@ -2,9 +2,7 @@ import { useState, useRef } from "react";
 import { Link } from "react-router";
 import EventList from "../EventListItems/EventList";
 import GetEventEmoji from "../../../Components/Events/EventEmojisAndImages/EventEmoji";
-import GetEventImage from "../../../Components/Events/EventEmojisAndImages/EventImages";
 import EventCategoryButtons from "../EventCategoryButtons";
-
 import "./eventList.css";
 
 const EventListView = ({
@@ -18,16 +16,15 @@ const EventListView = ({
 
   const search = searchValue.toLowerCase();
 
-const filteredEvents = events.filter((e) => {
-  const matchType = type ? e.type === type : true;
+  const filteredEvents = events.filter((e) => {
+    const matchType = type ? e.type === type : true;
 
-  const matchSearch =
-    e.name.toLowerCase().startsWith(search) ||
-    e.location.toLowerCase().startsWith(search);
+    const matchSearch =
+      e.name.toLowerCase().startsWith(search) ||
+      e.location.toLowerCase().startsWith(search);
 
-  return matchType && matchSearch;
-});
-
+    return matchType && matchSearch;
+  });
 
   const scrollSlider = (direction) => {
     const slider = sliderRef.current;
@@ -60,7 +57,6 @@ const filteredEvents = events.filter((e) => {
         <div className="eventSlider" ref={sliderRef}>
           {filteredEvents.map((event) => {
             const eventEmoji = GetEventEmoji(event.type);
-            const eventImage = GetEventImage(event.type);
 
             return (
               <div key={event.id} className="eventCard">
@@ -68,7 +64,6 @@ const filteredEvents = events.filter((e) => {
                   {...event}
                   darkMode={true}
                   eventEmoji={eventEmoji}
-                  eventImage={eventImage}
                   onEventModified={onEventModified}
                 />
                 <Link className="secondary" to={`/events/${event.id}`}>

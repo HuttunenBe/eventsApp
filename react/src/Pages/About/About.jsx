@@ -1,7 +1,8 @@
-import ContactPage from "../Contact/ContactPage";
 import "./about.css";
+import { useNavigate } from "react-router";
 
 const About = () => {
+  const navigate = useNavigate();
   return (
     <div className="aboutContainer">
       <section className="heroSection">
@@ -146,7 +147,9 @@ const About = () => {
           Have a question or idea? We'd love to hear from you and help you make
           your next event unforgettable.
         </p>
-        <button onClick={ContactPage}>Contact us</button>
+        <button className="contactButton" onClick={() => navigate("/contact")}>
+          Contact Us
+        </button>{" "}
         <a href="mailto:hello@highlightevents.fi"></a>
       </section>
     </div>

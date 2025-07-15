@@ -33,7 +33,7 @@ function DarkModeToggle() {
         checked={isDarkMode}
         onChange={toggleDarkMode}
         size={30}
-        sunColor = "#9370db"
+        sunColor="#9370db"
         moonColor="#FFF9C4"
       />
     </>

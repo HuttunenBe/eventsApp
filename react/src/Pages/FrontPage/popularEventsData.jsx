@@ -1,11 +1,9 @@
-
 const popularEvents = [
   {
     id: 1,
     title: "Dance Festival",
     date: "July 25",
     img: "https://images.pexels.com/photos/28987833/pexels-photo-28987833.jpeg",
-    
   },
   {
     id: 2,

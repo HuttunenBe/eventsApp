@@ -33,10 +33,8 @@ const EventCategoryButtons = ({ setType }) => {
         <button onClick={() => setType("Parties & Celebration")}>
           🎉 Parties & Celebration
         </button>
-     
-        <button onClick={() => setType(null)} >
-          Show All
-        </button>
+
+        <button onClick={() => setType(null)}>Show All</button>
       </div>
     </section>
   );

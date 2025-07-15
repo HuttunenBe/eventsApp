@@ -3,9 +3,7 @@ import { useNavigate, Link } from "react-router";
 import useAxios from "../../Hooks/UseAxios";
 import "./addEvent.css";
 
-
 const currentDate = new Date().toISOString().split("T", 1)[0];
-
 
 const AddEvent = ({ onEventAdded }) => {
   const { post } = useAxios();
