@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router";
-import { DotLoader } from "react-spinners";
 import useAxios from "../../../Hooks/UseAxios";
 import EventDetailsContent from "./EventDetailsContent";
 import "./eventDetails.css";
-import Loading from "../../Loading/Loading"
+import Loading from "../../Loading/Loading";
 
 const EventDetails = () => {
   const { id } = useParams();
@@ -27,7 +26,7 @@ const EventDetails = () => {
       });
   }, [id]);
 
-  if (loading) return <Loading/>;
+  if (loading) return <Loading />;
   if (!event) return <p>Event not found</p>; //do i need these
 
   return (

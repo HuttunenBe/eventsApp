@@ -1,9 +1,9 @@
 import { useState } from "react";
-import "./eventListItems.css";
+import WeatherModal from "../../../Components/Events/Map&Weather/WeatherModal";
+import MapModal from "../../../Components/Events/Map&Weather/MapModal";
 
 const EventDisplay = ({
   name,
-  date,
   location,
   type,
   description,
@@ -20,18 +20,18 @@ const EventDisplay = ({
 
   return (
     <>
-      <img src={eventImage} className="editImage" alt="Event type icon" />
+      <img src={image} className="eventPageImage" />
 
       <div>
         <div className="weatherModalIcon">
-          <p onClick={() => setIsModalOpen(!isModalOpen)}>☀️ 🌧️</p>
+          <p onClick={() => setIsModalOpen(true)} title="Show weather">
+            ☀️ 🌧️
+          </p>
           {isModalOpen && (
-            <div className="weatherModalWindow">
-              <p>All events need to have different weather</p>
-              <button onClick={() => setIsModalOpen(false)}>
-                <span className="material-icons">close</span>
-              </button>
-            </div>
+            <WeatherModal
+              location={location}
+              onClose={() => setIsModalOpen(false)}
+            />
           )}
         </div>
       </div>
@@ -43,12 +43,13 @@ const EventDisplay = ({
         Type: {type} <span className="eventEmoji">{eventEmoji}</span>
       </p>
       <p>Name: {name}</p>
-      <p>Date: {date}</p>
-      <p>Location: {location}</p>
+      <p>
+        Location: <MapModal location={location} />
+      </p>
 
       <p>Description: {description}</p>
       <p>Price: €{price}</p>
-      <button className="editButton " onClick={onEdit}>
+      <button className="editButton" onClick={onEdit}>
         Edit
       </button>
       <button className="deleteButton" onClick={onDelete}>

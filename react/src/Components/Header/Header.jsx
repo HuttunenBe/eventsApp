@@ -7,9 +7,9 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(!1);
   return (
     <header className="header">
-    <NavLink to="/" className="logo">
-  HighLights
-</NavLink>
+      <NavLink to="/" className="logo">
+        HighLights
+      </NavLink>
 
       <DarkModeToggle />
       {!menuOpen && (

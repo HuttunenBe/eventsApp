@@ -7,16 +7,34 @@ const ContactPage = () => {
     email: "",
     message: "",
   });
+
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setFormData({ name: "", email: "", message: "" });
+
+    try {
+      const response = await fetch("https://formspree.io/f/mrbkdnag", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -71,7 +89,7 @@ const ContactPage = () => {
             </button>
 
             {submitted && (
-              <p className="successMessage" role="alert">
+              <p className="successMessage">
                 Thank you! Your message has been sent.
               </p>
             )}
