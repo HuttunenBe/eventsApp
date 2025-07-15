@@ -25,6 +25,12 @@
   color: #ff3386;
 }
 
+.desktopMenu ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
 .desktopMenu a {
   text-decoration: none;
   font-weight: 700;
@@ -33,12 +39,6 @@
   font-size: 1rem;
   border-radius: 0.8rem;
   transition: all 0.3s ease;
-}
-
-.desktopMenu ul {
-  display: flex;
-  list-style: none;
-  gap: 1rem;
 }
 
 .desktopMenu a:hover,
@@ -88,6 +88,10 @@
   list-style: none;
 }
 
+.mobileNav li {
+  margin-bottom: 2.9rem;
+}
+
 .mobileNav a {
   color: #5a189a;
   padding: 0.6rem 1.2rem;
@@ -98,19 +102,11 @@
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-.mobileNav li {
-  margin-bottom: 2.9rem;
-}
-
 .mobileNav a:hover,
 .mobileNav a.active {
   background: linear-gradient(135deg, #ff006e, #8338ec);
   color: #fff;
   box-shadow: 0 4px 10px rgba(255, 0, 110, 0.3);
-}
-
-.material-icons {
-  font-size: 1.9rem;
 }
 
 #closeMenu {
@@ -125,18 +121,22 @@
   transform: rotate(90deg);
 }
 
+.material-icons {
+  font-size: 1.9rem;
+}
+
 @media (max-width: 910px) {
   .desktopMenu {
     display: none;
   }
 
+  #menuToggle {
+    display: block;
+  }
+
   .mobileMenu {
     display: block;
     width: 50vw;
-  }
-
-  #menuToggle {
-    display: block;
   }
 }
 
@@ -193,3 +193,5 @@ body.darkMode .mobileMenu {
 body.darkMode #closeMenu {
   color: #e0caff;
 }
+
+

@@ -4,8 +4,8 @@ import Newsletter from "./NewsLetter";
 
 function Footer() {
   return (
-    <footer className="footer">
-      <nav className="footerNav">
+    <footer>
+      <nav>
         <ul className="footerLinks">
           <li>
             <NavLink to="/">Home</NavLink>

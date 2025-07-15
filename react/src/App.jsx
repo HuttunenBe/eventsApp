@@ -7,7 +7,7 @@ import AddEvent from "./Pages/AddEvent/AddEvent";
 import EventList from "./Pages/EventPage/EventListItems/EventList";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
-import EventDetails from "./Components/Events/EventDetailsPage/EventDetails";
+import EventDetails from "./Pages/EventDetailsPage/EventDetails";
 import EventContainer from "./Pages/EventPage/EventContainer/EventContainer";
 import "./App.css";
 import UserAuthentication from "./Pages/UserAuthentication/UserAuthentication";

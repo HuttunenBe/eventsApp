@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router";
-import useAxios from "../../../Hooks/UseAxios";
+import useAxios from "../../Hooks/UseAxios";
 import EventDetailsContent from "./EventDetailsContent";
 import "./eventDetails.css";
-import Loading from "../../Loading/Loading";
+import Loading from "../../Components/Loading/Loading";
 
 const EventDetails = () => {
   const { id } = useParams();
