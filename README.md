@@ -18,13 +18,17 @@ Users can explore, add, edit and delete events, with all changes saved to a data
 * ⏳ Loading Indicators – On multiple pages using React Spinners
 * ☁️ Weather Display – Real time weather information for event locations via external API
 * 🗺️ Map Display – Google Maps for event locations
-*   Working on: CSS, User Authentication 
+*   Working on: CSS, User Authentication
 
-### 🚀  Demo
+    _____
+  
+## 🚀  Demo
 [**Events App on Vercel**](https://events-app-fawn.vercel.app/)
 
-> **Note:** Only frontend
+> **Note:** Only frontend on Vercel
 
+Check out how the event tickets work:  
+[Demo on YouTube](https://youtu.be/0NzhdpnYPQQ)
 
 ______________________
 
@@ -40,10 +44,6 @@ ______________________
 * Laravel – RESTful API
 * MySQL – database
 
-
-# 🖼️ App Preview
-
-![GitHub Events App](./githubEvents.png)
 ________
 
 ## Setup Guide
