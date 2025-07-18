@@ -20,7 +20,10 @@ Users can explore, add, edit and delete events, with all changes saved to a data
 * 🗺️ Map Display – Google Maps for event locations
 *   Working on: CSS, User Authentication 
 
+### 🚀  Demo
+[**Events App on Vercel**](https://events-app-fawn.vercel.app/)
 
+> **Note:** Only frontend
 
 
 ______________________
