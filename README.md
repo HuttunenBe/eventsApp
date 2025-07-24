@@ -2,7 +2,17 @@
 # 🌟 Events App – Highlight Events 
 
 This web app started as a team project at Business College Helsinki. I decided to finish it on my own, keeping the parts I built and adding new features myself. The app is about discovering and managing local events all around Finland.
-Users can explore, add, edit and delete events, with all changes saved to a database. It has several other features like dark mode, weather info, maps for event locations, a read more button, emoji icons for event types, calendar view and multiple ways to search or sort events.
+Users can explore, add, edit and delete events, with all changes saved to a database. It has several other features like dark mode, weather info, maps for event locations, a read more button, emoji icons for event types, calendar view and multiple ways to search or sort events. 
+ 
+
+## 🌐 Live Demo
+[**Events App on Vercel**](https://events-app-fawn.vercel.app/)
+
+> **Note:** Only frontend on Vercel
+
+Check out how the event tickets work:  
+[Demo on YouTube](https://youtu.be/0NzhdpnYPQQ)
+
 
 ## Live Vercel link
 https://events-app-fawn.vercel.app/
@@ -21,9 +31,7 @@ https://events-app-fawn.vercel.app/
 * ⏳ Loading Indicators – On multiple pages using React Spinners
 * ☁️ Weather Display – Real time weather information for event locations via external API
 * 🗺️ Map Display – Google Maps for event locations
-*   Working on: CSS, User Authentication 
-
-
+*   Working on: CSS, User Authentication
 
 
 ______________________
@@ -40,10 +48,6 @@ ______________________
 * Laravel – RESTful API
 * MySQL – database
 
-
-# 🖼️ App Preview
-
-![GitHub Events App](./githubEvents.png)
 ________
 
 ## Setup Guide
