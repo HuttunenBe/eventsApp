@@ -8,11 +8,3 @@ use App\Http\Controllers\Api\WeatherController;
 
 Route::apiResource('events', EventController::class);
 
-
-/*Route::get('/weather', [WeatherController::class, 'index'])->name('weather');*/
-
-
-
-
-
-// Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe']);

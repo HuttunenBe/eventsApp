@@ -1,3 +1,5 @@
+import "./mapModal.css"
+
 function OpenMapButton({ location }) {
   function openMap() {
     const url =
@@ -6,7 +8,10 @@ function OpenMapButton({ location }) {
     window.open(url, "_blank");
   }
 
-  return <button onClick={openMap}>Open {location} in Google Maps</button>;
+return (
+  <>
+    {location} <button onClick={openMap} className="mapButton">Open in Google Maps</button>
+  </>
+);
 }
-
 export default OpenMapButton;

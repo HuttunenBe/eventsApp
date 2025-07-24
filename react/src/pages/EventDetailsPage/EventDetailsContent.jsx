@@ -24,10 +24,11 @@ const EventDetailsContent = ({ event, navigate }) => {
           <p>
             <strong>Date:</strong> {event.date}
           </p>
-          <p>
-            <strong>Location:</strong>
-            <MapModal location={event.location} />
-          </p>
+  <p>
+  <strong>Location: </strong>
+  <br />
+  <MapModal location={event.location} />
+</p>
           <p>
             <strong>Weather:</strong>
             <WeatherModal location={event.location} showCloseButton={false} />
