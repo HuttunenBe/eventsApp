@@ -40,15 +40,15 @@ const EventDisplay = ({
         {isFavorite ? "❤️" : "🤍"}{" "}
       </button>
       <p>
-        Type: {type} <span className="eventEmoji">{eventEmoji}</span>
+        <strong>Type: </strong>{type} <span className="eventEmoji">{eventEmoji}</span>
       </p>
-      <p>Name: {name}</p>
+      <p><strong>Name: </strong>{name}</p>
       <p>
-        Location: <MapModal location={location} />
+       <strong> Location: </strong><MapModal location={location} />
       </p>
 
-      <p>Description: {description}</p>
-      <p>Price: €{price}</p>
+      <p><strong>Description: </strong>{description}</p>
+      <p><strong>Price: </strong> {price} €</p>
       <button className="editButton" onClick={onEdit}>
         Edit
       </button>
