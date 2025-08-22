@@ -39,14 +39,11 @@ ______________________
 ## 🛠️ Tech Stack
 ### 🖥️  Frontend
 * React
-* Axios
-* FullCalendar
-* React Spinners
-* React Scroll-To-Top, Dark Mode Toggle
+* CSS
 
 ### 🖥️ Backend
-* Laravel – RESTful API
-* MySQL – database
+* Laravel 
+* MySQL 
 
 ________
 
