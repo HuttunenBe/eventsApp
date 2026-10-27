@@ -16,6 +16,7 @@ const Frontpage = () => {
   const scrollSlider = (direction) => {
     const slider = sliderRef.current;
     if (slider) {
+      
       const card = slider.querySelector(".popularEventCard");
       if (card) {
         const cardWidth = card.offsetWidth;

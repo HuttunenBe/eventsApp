@@ -222,9 +222,10 @@
 }
 
 .popularEventsSection {
-  max-width: 100vw;
+  box-sizing: border-box;
+  width: 100%;
   background-color: #f1e6f9;
-  padding: 2rem;
+  padding: 2rem 1rem;
   margin-bottom: 3rem;
   border-radius: 1.2rem;
 }
@@ -237,15 +238,20 @@
 }
 
 .popularEventCard {
+  box-sizing: border-box;
+  flex: 0 0 calc(25% - 1.25rem);
   align-items: center;
   background: #fff;
-  width: 280px;
   padding: 1rem;
   border-radius: 1.2rem;
   text-align: center;
-  flex: 0 0 250px;
+  margin: 0 0.625rem;
+  scroll-margin: 0 0.625rem;
+  scroll-snap-align: start;
   box-shadow: 0 6px 20px rgba(114, 9, 183, 0.3);
-  transition: transform 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .popularEventCard:hover {
@@ -254,11 +260,12 @@
 }
 
 .popularEventCard img {
+  display: block;
   width: 100%;
   height: 160px;
   object-fit: cover;
   margin-bottom: 1rem;
-  border-radius: 1.2rem 1.2rem 0rem 0rem;
+  border-radius: 0.8rem;
 }
 
 .popularEventCard h4 {
@@ -268,32 +275,42 @@
 
 .popularEventCard p {
   color: #5f0f40;
-  font-size: rem;
+  font-size: 1rem;
 }
 
 .popularEventsSlider {
   display: flex;
   overflow-x: auto;
-  justify-content: center;
-  padding: 1rem 0.5rem;
-  gap: 1rem;
+  justify-content: flex-start;
+  padding: 1.25rem 0;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.popularEventsSlider::-webkit-scrollbar {
+  display: none;
 }
 
 .sliderWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 100vw;
+  gap: 0.75rem;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .arrowButton {
-  padding: 0.3rem 0.8rem;
-  margin: 0 0.5rem;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
 }
 
 .arrowButton:hover {
   background: #eb7be9;
-  border: none;
 }
 
 @media (max-width: 768px) {
@@ -334,20 +351,15 @@
     gap: 2rem;
   }
 
-  .sliderWrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .popularEventsSlider {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+    padding: 1.25rem 0;
   }
 
   .popularEventCard {
-    width: 90%;
-    max-width: 320px;
+    width: auto;
+    flex: 0 0 calc(100% - 1.25rem);
+    max-width: none;
+    scroll-snap-align: start;
   }
 
   .arrowButton {
