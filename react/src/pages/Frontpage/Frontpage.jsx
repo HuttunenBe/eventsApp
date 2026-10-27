@@ -3,6 +3,7 @@ import PopularEventsData from "./PopularEventsData";
 import { useRef } from "react";
 import CountDown from "./CountDown";
 import "./frontpage.css";
+import WeatherModal from "../../Components/Events/Map&Weather/WeatherModal";
 
 const Frontpage = () => {
   const navigate = useNavigate();
@@ -16,7 +17,6 @@ const Frontpage = () => {
   const scrollSlider = (direction) => {
     const slider = sliderRef.current;
     if (slider) {
-      
       const card = slider.querySelector(".popularEventCard");
       if (card) {
         const cardWidth = card.offsetWidth;
@@ -65,8 +65,16 @@ const Frontpage = () => {
                 onClick={() => navigate(`/events/${event.id}`)}
               >
                 <img src={event.img} alt={event.title} />
-                <h4>{event.title}</h4>
-                <p>{event.date}</p>
+                <h4>{event.title} </h4>
+                <p>
+                  {event.date}{" "}
+                  <WeatherModal
+                    location={event.location}
+                    showCloseButton={false}
+                    iconOnly={true}
+                  />{" "}
+                </p>
+
                 <CountDown targetDate={convertToDate(event.date)} />
               </div>
             ))}

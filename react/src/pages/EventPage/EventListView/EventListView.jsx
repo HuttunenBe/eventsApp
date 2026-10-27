@@ -14,9 +14,10 @@ const EventListView = ({
   const [type, setType] = useState(null);
   const sliderRef = useRef(null);
 
-  const search = searchValue.toLowerCase();
+  const search = (searchValue || "").toLowerCase();
+  const safeEvents = Array.isArray(events) ? events : [];
 
-  const filteredEvents = events.filter((e) => {
+  const filteredEvents = safeEvents.filter((e) => {
     const matchType = type ? e.type === type : true;
 
     const matchSearch =

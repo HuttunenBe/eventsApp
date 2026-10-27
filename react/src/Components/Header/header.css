@@ -99,7 +99,9 @@
   font-weight: 700;
   text-decoration: none;
   font-size: 1.2rem;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
 .mobileNav a:hover,
@@ -193,5 +195,3 @@ body.darkMode .mobileMenu {
 body.darkMode #closeMenu {
   color: #e0caff;
 }
-
-

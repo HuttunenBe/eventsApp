@@ -164,7 +164,9 @@
   text-align: center;
 
   box-shadow: 0 12px 35px rgba(40, 35, 75, 0.25);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .featureCard:hover {
@@ -199,7 +201,9 @@
   border-radius: 1.5rem;
   text-align: center;
   box-shadow: 0 10px 30px rgba(111, 85, 214, 0.4);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .teamMemberCard img {
@@ -210,7 +214,9 @@
   border: 5px solid #6e57d0;
   box-shadow: 0 10px 30px rgba(111, 85, 214, 0.4);
   margin-bottom: 1.2rem;
-  transition: border-color 0.3s ease, transform 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .teamMemberCard:hover img {

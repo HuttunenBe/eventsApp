@@ -5,14 +5,14 @@ import EventListView from "../EventListView/EventListView";
 import useAxios from "../../../Hooks/UseAxios";
 import faqData from "./faqData";
 import "./eventContainer.css";
-import Loading from "../../../Components/Loading/Loading"
+import Loading from "../../../Components/Loading/Loading";
 
 const EventContainer = () => {
   const [events, setEvents] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const [showCalendar, setShowCalendar] = useState(false);
- const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState("");
   const [showAllFaq, setShowAllFaq] = useState(false);
 
   const { get } = useAxios();
@@ -77,7 +77,6 @@ const EventContainer = () => {
         <section className="benefitsSection">
           <h2>Why Use EventFinder?</h2>
           <div className="benefitsGrid">
-
             <div className="benefitCard">
               <img
                 src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"

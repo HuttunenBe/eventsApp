@@ -268,6 +268,14 @@
   border-radius: 0.8rem;
 }
 
+.popularEventCard img.weatherIcon {
+  margin: 0 auto;
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 0;
+}
+
 .popularEventCard h4 {
   color: #d100d1;
   margin-bottom: 0.2rem;

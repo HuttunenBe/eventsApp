@@ -43,7 +43,9 @@
   border: none;
   border-radius: 4rem;
   padding: 0.4rem 1.2rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .eventTicket button:hover {
