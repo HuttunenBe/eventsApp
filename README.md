@@ -11,8 +11,6 @@ Users can explore, add, edit and delete events, with all changes saved to a data
 ## 🌐 Live Demo
 [**Events App on Vercel**](https://events-app-fawn.vercel.app/)
 
-> **Note:** Only frontend on Vercel
-
 Check out how the event tickets work:  
 [Demo on YouTube](https://youtu.be/0NzhdpnYPQQ)
 
