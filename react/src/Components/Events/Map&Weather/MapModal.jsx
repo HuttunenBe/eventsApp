@@ -1,4 +1,4 @@
-import "./mapModal.css"
+import "./mapModal.css";
 
 function OpenMapButton({ location }) {
   function openMap() {
@@ -8,10 +8,13 @@ function OpenMapButton({ location }) {
     window.open(url, "_blank");
   }
 
-return (
-  <>
-    {location} <button onClick={openMap} className="mapButton">Open in Google Maps</button>
-  </>
-);
+  return (
+    <>
+      {location}{" "}
+      <button onClick={openMap} className="mapButton">
+        Open in Google Maps
+      </button>
+    </>
+  );
 }
 export default OpenMapButton;

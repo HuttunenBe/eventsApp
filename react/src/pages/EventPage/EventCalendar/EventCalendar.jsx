@@ -11,7 +11,7 @@ export function EventCalendar({ events }) {
       title: name,
       date,
       extendedProps: { description, type, long_description, price, location },
-    })
+    }),
   );
 
   return (

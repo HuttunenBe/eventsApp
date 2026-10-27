@@ -68,7 +68,7 @@ const AddEvent = ({ onEventAdded }) => {
     post("api/events", eventToSend)
       .then((res) => {
         onEventAdded?.(res.data);
-        alert("Event saved successfully!"); 
+        alert("Event saved successfully!");
         navigate("/events");
         setFormData({
           name: "",
@@ -114,7 +114,7 @@ const AddEvent = ({ onEventAdded }) => {
               name="date"
               type="date"
               value={formData.date}
-                min={currentDate}
+              min={currentDate}
               onChange={handleChange}
             />
             {errors.date && <p className="error">{errors.date}</p>}

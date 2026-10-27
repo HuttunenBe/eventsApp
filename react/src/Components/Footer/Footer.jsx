@@ -19,9 +19,6 @@ function Footer() {
           <li>
             <NavLink to="/events">Events</NavLink>
           </li>
-          <li>
-            <NavLink to="/userAuthentication">Log in</NavLink>
-          </li>
         </ul>
       </nav>
 

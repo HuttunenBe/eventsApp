@@ -64,14 +64,6 @@ function Header() {
                 Contact us
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                to="/userAuthentication"
-                onClick={() => setMenuOpen(false)}
-              >
-                Log in
-              </NavLink>
-            </li>
           </ul>
         </div>
       </nav>
@@ -91,9 +83,6 @@ function Header() {
           </li>
           <li>
             <NavLink to="/contact">Contact</NavLink>
-          </li>
-          <li>
-            <NavLink to="/userAuthentication">Log in</NavLink>
           </li>
         </ul>
       </nav>

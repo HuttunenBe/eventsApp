@@ -9,7 +9,6 @@ import Footer from "./Components/Footer/Footer";
 import EventDetails from "./pages/EventDetailsPage/EventDetails";
 import EventContainer from "./pages/EventPage/EventContainer/EventContainer";
 import "./App.css";
-import UserAuthentication from "./pages/UserAuthentication/UserAuthentication";
 import ContactPage from "./pages/Contact/ContactPage";
 
 function App() {
@@ -21,7 +20,6 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Frontpage />} />
-            <Route path="/authentication" element={<UserAuthentication />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/events" element={<EventContainer />} />

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 
-
 const Countdown = ({ targetDate }) => {
   const [timeLeft, setTimeLeft] = useState(getTimeLeft(targetDate));
 

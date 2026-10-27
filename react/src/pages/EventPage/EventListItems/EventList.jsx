@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import useAxios from "../../../Hooks/UseAxios";
 import EditEventForm from "../EditEvent/EditEventForm";
 import EventDisplay from "./EventDisplay";
-import Loading from "../../../Components/Loading/Loading"
+import Loading from "../../../Components/Loading/Loading";
 import "./eventListItems.css";
 
 const EventList = ({
@@ -68,7 +68,7 @@ const EventList = ({
     setLoading(true);
     put(`api/events/${id}`, editedEvent)
       .then(() => {
-          alert("Event updated successfully!"); 
+        alert("Event updated successfully!");
         setIsEditing(false);
         onEventModified();
       })
@@ -84,7 +84,7 @@ const EventList = ({
     if (window.confirm("Are you sure you want to delete this event?")) {
       del(`api/events/${id}`)
         .then(() => {
-          alert("Event deleted successfully!"); 
+          alert("Event deleted successfully!");
           onEventModified();
         })
         .catch((error) => {

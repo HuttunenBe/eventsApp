@@ -129,7 +129,9 @@ body.darkMode footer {
 
 body.darkMode .footerLinks a {
   color: #daa4dc;
-  transition: color 0.3s ease, transform 0.2s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.2s ease;
   display: inline-block;
 }
 

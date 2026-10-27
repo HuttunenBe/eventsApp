@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./contactPage.css";
+import OfficeMap from "./officeMap";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -32,6 +33,7 @@ const ContactPage = () => {
       } else {
         alert("Something went wrong. Please try again.");
       }
+      // eslint-disable-next-line no-unused-vars
     } catch (error) {
       alert("Something went wrong. Please try again.");
     }
@@ -113,6 +115,7 @@ const ContactPage = () => {
             <p>⏰ Office Hours: Mon–Fri, 9:00 AM – 5:00 PM</p>
           </aside>
         </div>
+        <OfficeMap />
       </div>
     </div>
   );
