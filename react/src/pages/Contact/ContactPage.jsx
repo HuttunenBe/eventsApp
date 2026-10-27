@@ -98,12 +98,12 @@ const ContactPage = () => {
           <aside className="contactInfo" aria-label="Contact Information">
             <h2>Our Office</h2>
             <p>
-              📍 123 Event Street
+              📍 123 Annankatu
               <br />
-              Cityville, CV 45678
+              Finland, 09880
             </p>
             <p>
-              📞 Phone: +044 567 890
+              📞 Phone: +041 111 1111
               <br />
               ✉️ Email:{" "}
               <a href="mailto:info@highlightevents.com">

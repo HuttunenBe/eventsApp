@@ -34,14 +34,14 @@ function Footer() {
           <div className="contactCard">
             <h4>📍 Address</h4>
             <p>
-              123 Event Street
+              123 Annankatu
               <br />
-              Cityville, CV 45678
+              Finland, 09880
             </p>
           </div>
           <div className="contactCard">
             <h4>📞 Phone</h4>
-            <p>+044 567 890</p>
+            <p>041 111 1111 11</p>
           </div>
           <div className="contactCard">
             <h4>✉️ Email</h4>
