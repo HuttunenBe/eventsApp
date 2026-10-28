@@ -1,53 +1,146 @@
-import { useState } from "react";
-import { DotLoader } from "react-spinners";
-import Loading from "../Loading/Loading";
+import { useState } from 'react';
 
-function Newsletter() {
+export default function NewsletterForm() {
   const [loading, setLoading] = useState(false);
-  const [email, setEmail] = useState("");
-  const [isEmailValid, setIsEmailValid] = useState(true);
+  const [error, setError] = useState({});
+  const [consent, setConsent] = useState(false);
+  const [consentError, setConsentError] = useState(false);
 
-  function handleInput(event) {
-    setEmail(event.target.value);
-  }
+  const [formValues, setFormValues] = useState({
+    email: '',
+  });
 
-  function handleSubmit(event) {
-    event.preventDefault();
+  const onSubmit = async (e) => {
+    e.preventDefault();
 
-    if (email === "" || !/\S+@\S+\.\S+/.test(email)) {
-      //check if empty or doesn't match an email address
-      setIsEmailValid(false);
-    } else {
-      setLoading(true);
-      setIsEmailValid(true);
+    if (loading) return;
 
-      setTimeout(() => {
-        setLoading(false);
-        alert("Thank you for subscribing with us!");
-        setEmail("");
-      }, 1200);
+    setError({});
+    setConsentError(false);
+
+    const cleanedNewsletterValues = {
+      email: (formValues.email || '').trim().toLowerCase(),
+    };
+
+    const validationError = {};
+
+    if (!cleanedNewsletterValues.email) {
+      validationError.email = 'Email is required.';
+    } else if (
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
+        cleanedNewsletterValues.email
+      )
+    ) {
+      validationError.email = 'Please enter a valid email address.';
     }
-  }
+
+    if (Object.keys(validationError).length > 0) {
+      setError(validationError);
+      return;
+    }
+
+    if (!consent) {
+      setConsentError(true);
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const response = await fetch(
+        'http://127.0.0.1:8000/api/newsletter',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            email: cleanedNewsletterValues.email,
+            consent: consent,
+          }),
+        }
+      );
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        alert(
+          data.message ||
+            'Error. Please try again later.'
+        );
+        return;
+      }
+
+      alert(
+        data.message ||
+          'Thank you for subscribing to the newsletter.'
+      );
+
+      setFormValues({
+        email: '',
+      });
+
+      setConsent(false);
+    } catch (error) {
+      console.error('Newsletter request failed:', error);
+
+      alert(
+        'Error. Please try again later.'
+      );
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
-    <>
-      <h2 id="subscribeHeader">Subscribe to our newsletter!</h2>
-      {!isEmailValid ? <p>Please enter a valid email address</p> : null}
-      {loading ? (
-        <Loading />
-      ) : (
-        <form onSubmit={handleSubmit}>
-          <input
-            type="email"
-            placeholder="Enter your email address please"
-            value={email}
-            onChange={handleInput}
-          />
-          <button type="submit">Subscribe</button>
-        </form>
-      )}
-    </>
+    <form onSubmit={onSubmit}>
+      <div>
+        <label htmlFor="newsletterEmail">Email</label>
+
+        <input
+          id="newsletterEmail"
+          type="email"
+          value={formValues.email}
+          onChange={(e) => {
+            setFormValues({
+              ...formValues,
+              email: e.target.value,
+            });
+
+            setError((previousError) => ({
+              ...previousError,
+              email: '',
+            }));
+          }}
+          required
+        />
+
+        {error.email && <p>{error.email}</p>}
+      </div>
+
+      <div>
+   <label className="newsletterCheckbox">
+  <input
+    id="newsletterCheckbox"
+    type="checkbox"
+    checked={consent}
+    onChange={(e) => {
+      setConsent(e.target.checked);
+      setConsentError(false);
+    }}
+  />
+  I agree to receive the newsletter by email.
+</label>
+
+        {consentError && (
+          <p>Please tick the checkbox before subscribing.</p>
+        )}
+      </div>
+
+      <button type="submit" disabled={loading}>
+        {loading ? 'Subscribing' : 'Subscribe'}
+      </button>
+    </form>
   );
 }
-
-export default Newsletter;
