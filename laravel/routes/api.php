@@ -6,5 +6,6 @@ use App\Http\Controllers\Api\NewsletterController;
 use App\Http\Controllers\Api\WeatherController;
 
 
-Route::apiResource('events', EventController::class);
 
+Route::apiResource('events', EventController::class);
+Route::post('/newsletter', [NewsletterController::class, 'subscribe']);

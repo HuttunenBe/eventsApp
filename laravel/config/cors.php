@@ -4,8 +4,7 @@ return [
     'paths' => ['api/*'],
     'allowed_methods' => ['*'],
     'allowed_origins' => [
-        'http://localhost:5176',
-        'https://eventsapp-1ky4.onrender.com',
+        'http://localhost:5176'
     ],
 
     'allowed_origins_patterns' => [],
