@@ -43,7 +43,7 @@ function Footer() {
           <div className="contactCard">
             <h4>✉️ Email</h4>
             <p>
-              <a href="mailto:info@highlightevents.com">
+              <a href="mailto:info@highlightevents.fi">
                 info@highlightevents.com
               </a>
             </p>

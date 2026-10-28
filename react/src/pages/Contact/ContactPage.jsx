@@ -108,8 +108,8 @@ const ContactPage = () => {
               📞 Phone: +041 111 1111
               <br />
               ✉️ Email:{" "}
-              <a href="mailto:info@highlightevents.com">
-                info@highlightevents.com
+              <a href="mailto:info@highlightevents.fi">
+                info@highlightevents.fi
               </a>
             </p>
             <p>⏰ Office Hours: Mon–Fri, 9:00 AM – 5:00 PM</p>
