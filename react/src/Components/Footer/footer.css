@@ -29,6 +29,7 @@ footer {
   color: #a61983;
 }
 
+
 .contactInfoSection {
   max-width: 900px;
   padding: 2rem 0;
@@ -86,17 +87,16 @@ footer {
   flex-direction: column;
 }
 
+#subscribeHeader {
+  font-size: 1.6rem;
+  margin-top: 3rem;
+}
+
 footer form {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   gap: 1rem;
-}
-
-#subscribeHeader {
-  font-size: 1.6rem;
-  margin-top: 3rem;
 }
 
 footer form input {
@@ -106,6 +106,24 @@ footer form input {
   border: none;
   font-size: 1rem;
   border-radius: 0.8rem;
+}
+
+#newsletterEmail {
+  margin-top: 0.5rem;
+}
+
+.newsletterCheckbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.newsletterCheckbox input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  flex-shrink: 0;
 }
 
 footer form button {
@@ -121,6 +139,7 @@ footer form button:hover {
   background-color: #8a2be2;
   color: white;
 }
+
 
 body.darkMode footer {
   background: rgba(30, 30, 30, 0.85);
