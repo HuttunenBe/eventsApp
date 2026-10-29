@@ -1,43 +1,43 @@
-
-# Use official PHP image with Apache
+# PHP 8.2 with Apache
 FROM php:8.2-apache
 
-# Install system dependencies
+# System deps + PHP extensions (pdo_mysql is needed for Aiven MySQL)
 RUN apt-get update && apt-get install -y \
     git zip unzip libzip-dev \
     && docker-php-ext-install pdo pdo_mysql zip \
     && rm -rf /var/lib/apt/lists/*
 
-# Enable Apache mod_rewrite for Laravel routing
+# Laravel needs mod_rewrite for pretty URLs
 RUN a2enmod rewrite
 
-# Set Laravel's public folder as Apache's document root
+# Serve from /public instead of the project root
 RUN sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/html/public|' \
     /etc/apache2/sites-available/000-default.conf
 
-# Allow Laravel's .htaccess file to handle routing
+# Allow .htaccess overrides (Laravel's routing depends on it)
 RUN sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/AllowOverride All/' \
     /etc/apache2/apache2.conf
 
-# Set working directory
+# Silences the "could not determine server's fully qualified domain name" warning
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+
 WORKDIR /var/www/html
 
-# Copy Laravel project files
+# Copy the app
 COPY . /var/www/html
 
-# Copy Composer
+# Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-
-# Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
 
-# Fix permissions
+# Laravel needs write access to these
 RUN chown -R www-data:www-data storage bootstrap/cache
 
-# Set safe directory for Git
+# Avoids git "dubious ownership" errors
 RUN git config --global --add safe.directory /var/www/html
 
-EXPOSE 80
+# Start script: runs migrations, then starts Apache.
+# sed strips Windows line endings (CRLF), which otherwise break the script on Linux
+RUN sed -i 's/\r$//' /var/www/html/start.sh && chmod +x /var/www/html/start.sh
 
-# Run Apache in the foreground
-CMD ["apache2-foreground"]
+CMD ["/var/www/html/start.sh"]
