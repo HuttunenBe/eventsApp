@@ -24,7 +24,7 @@ const EventContainer = () => {
   const fetchEvents = () => {
     setLoading(true);
     setError(null);
-    get("api/events")
+    get("/api/events")
       .then((response) => {
         setEvents(response.data || []);
         setLoading(false);
