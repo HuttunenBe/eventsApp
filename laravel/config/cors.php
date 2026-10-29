@@ -4,7 +4,7 @@ return [
     'paths' => ['api/*'],
     'allowed_methods' => ['*'],
     'allowed_origins' => [
-        'http://localhost:5176'
+        'http://localhost:5177'
     ],
 
     'allowed_origins_patterns' => [],
