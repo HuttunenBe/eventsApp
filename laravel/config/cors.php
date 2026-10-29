@@ -4,7 +4,8 @@ return [
     'paths' => ['api/*'],
     'allowed_methods' => ['*'],
     'allowed_origins' => [
-        'http://localhost:5177'
+        'http://localhost:5177',
+        'https://events-app-2026.vercel.app'
     ],
 
     'allowed_origins_patterns' => [],
