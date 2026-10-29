@@ -12,13 +12,13 @@ class EventData extends Model
     protected $table = 'event_data';
 
     protected $fillable = [
-        'name',
-        'description',
-        'long_description',
+   'name',
         'date',
+        'description',
         'location',
         'type',
         'price',
         'image',
+        'long_description',
     ];
 }

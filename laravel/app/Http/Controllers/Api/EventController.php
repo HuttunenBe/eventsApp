@@ -9,10 +9,10 @@ use App\Models\EventData;
 
 class EventController extends Controller
 {
-    public function index()
-    {
-        return EventData::all();
-    }
+public function index()
+{
+    return response()->json(EventData::all());
+}
 
     public function store(Request $request)
     {
