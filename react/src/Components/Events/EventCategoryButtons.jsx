@@ -1,40 +1,49 @@
-const EventCategoryButtons = ({ setType }) => {
+import { useNavigate } from "react-router";
+
+const EventCategoryButtons = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="categorySection">
       <h2>Browse by Category</h2>
+
       <div className="categoryButtons">
-        <button onClick={() => setType("Outdoor & Nature")}>
+        <button onClick={() => navigate("/events/category/Outdoor & Nature")}>
           🌿 Outdoor & Nature
         </button>
-        <button onClick={() => setType("Food & Social")}>
+        <button onClick={() => navigate("/events/category/Food & Social")}>
           🥗 Food & Social
         </button>
-        <button onClick={() => setType("Hobbies & DIY")}>
+        <button onClick={() => navigate("/events/category/Hobbies & DIY")}>
           🎨 Hobbies & DIY
         </button>
-        <button onClick={() => setType("Learning & Networking")}>
+        <button
+          onClick={() => navigate("/events/category/Learning & Networking")}
+        >
           📝 Learning & Networking
         </button>
-        <button onClick={() => setType("Health & Wellness")}>
+        <button onClick={() => navigate("/events/category/Health & Wellness")}>
           🌸 Health & Wellness
         </button>
-        <button onClick={() => setType("Music & Entertainment")}>
+        <button
+          onClick={() => navigate("/events/category/Music & Entertainment")}
+        >
           🎤 Music & Entertainment
         </button>
-        <button onClick={() => setType("Markets & Swaps")}>
+        <button onClick={() => navigate("/events/category/Markets & Swaps")}>
           🛍️ Markets & Swaps
         </button>
-        <button onClick={() => setType("Family & Kids")}>
+        <button onClick={() => navigate("/events/category/Family & Kids")}>
           🧸 Family & Kids
         </button>
-        <button onClick={() => setType("Sports & Games")}>
+        <button onClick={() => navigate("/events/category/Sports & Games")}>
           🏀 Sports & Games
         </button>
-        <button onClick={() => setType("Parties & Celebration")}>
+        <button
+          onClick={() => navigate("/events/category/Parties & Celebration")}
+        >
           🎉 Parties & Celebration
         </button>
-
-        <button onClick={() => setType(null)}>Show All</button>
       </div>
     </section>
   );

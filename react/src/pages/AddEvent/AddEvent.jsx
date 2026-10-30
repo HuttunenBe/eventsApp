@@ -70,22 +70,37 @@ const AddEvent = ({ onEventAdded }) => {
         onEventAdded?.(res.data);
         alert("Event saved successfully!");
         navigate("/events");
-        setFormData({
-          name: "",
-          date: "",
-          location: "",
-          type: "",
-          description: "",
-          long_description: "",
-          price: "",
-          image: "",
-        });
-        setErrors({});
       })
       .catch((error) => {
-        console.error("Failed to add event:", error);
-        alert("Oops! Something went wrong.");
+        console.error("Saving event locally", error);
+
+        const savedEvents = JSON.parse(localStorage.getItem("events") || "[]");
+
+        const newEvent = {
+          ...eventToSend,
+          id: Date.now(),
+        };
+
+        savedEvents.push(newEvent);
+
+        localStorage.setItem("events", JSON.stringify(savedEvents));
+
+        onEventAdded?.(newEvent);
+        alert("Event saved locally!");
+        navigate("/events");
       });
+
+    setFormData({
+      name: "",
+      date: "",
+      location: "",
+      type: "",
+      description: "",
+      long_description: "",
+      price: "",
+      image: "",
+    });
+    setErrors({});
   };
   return (
     <>

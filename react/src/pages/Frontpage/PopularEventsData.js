@@ -1,4 +1,3 @@
-
 const PopularEventsData = [
   {
     id: 21,

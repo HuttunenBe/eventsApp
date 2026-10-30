@@ -1,0 +1,10 @@
+.seeMoreButton {
+  display: block;
+  border: none;
+  border-radius: 1.8rem;
+  font-size: 1rem;
+  margin: 0rem auto;
+  padding: 1rem 2rem;
+  background-color: #8a2be2;
+  color: white;
+}

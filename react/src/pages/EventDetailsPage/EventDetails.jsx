@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router";
 import useAxios from "../../Hooks/UseAxios";
@@ -30,7 +29,7 @@ const EventDetails = () => {
         }
       } catch {
         const localEvent = eventsData.find(
-          (item) => String(item.id) === String(id)
+          (item) => String(item.id) === String(id),
         );
 
         if (isMounted) {
@@ -58,9 +57,7 @@ const EventDetails = () => {
     return (
       <div>
         <p>Event not found.</p>
-        <button onClick={() => navigate("/Events")}>
-          Back to Events
-        </button>
+        <button onClick={() => navigate("/Events")}>Back to Events</button>
       </div>
     );
   }
