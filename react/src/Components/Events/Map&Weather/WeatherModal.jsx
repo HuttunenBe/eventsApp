@@ -13,7 +13,7 @@ function WeatherModal({
 
     fetch(
       "https://api.weatherapi.com/v1/current.json?key=" +
-        import.meta.env.VITE_WEATHER_API_KEY +
+        import.meta.env.WEATHER_API_KEY +
         "&q=" +
         encodeURIComponent(location) +
         "&aqi=no",

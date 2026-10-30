@@ -44,11 +44,12 @@ export default function NewsletterForm() {
 
     setLoading(true);
 
+const NEWSLETTER_API_URL = import.meta.env.NEWSLETTER_API_URL;
 
      try {
-      const response = await 
-        fetch("api/newsletter", {
-        
+      const response = await fetch(
+  `${NEWSLETTER_API_URL}/api/newsletter`,
+        {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
