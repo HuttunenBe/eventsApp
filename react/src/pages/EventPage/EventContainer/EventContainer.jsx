@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import EventCalendar from "../EventCalendar/EventCalendar";
 import EventListView from "../EventListView/EventListView";
+import eventsData from "./eventsData";
 import useAxios from "../../../Hooks/UseAxios";
 import faqData from "./faqData";
 import "./eventContainer.css";
@@ -24,16 +25,20 @@ const EventContainer = () => {
   const fetchEvents = () => {
     setLoading(true);
     setError(null);
-    get("/api/events")
-      .then((response) => {
-        setEvents(response.data || []);
-        setLoading(false);
-      })
-      .catch(() => {
-        setError("Failed to fetch events. Please try again later.");
-        setLoading(false);
-      });
-  };
+
+  get("/api/events")
+    .then((response) => {
+      setEvents(
+        Array.isArray(response.data) ? response.data : eventsData
+      );
+    })
+    .catch(() => {
+      setEvents(eventsData);
+    })
+    .finally(() => {
+      setLoading(false);
+    });
+};
 
   const faqToShow = showAllFaq ? faqData : faqData.slice(0, 3);
 
