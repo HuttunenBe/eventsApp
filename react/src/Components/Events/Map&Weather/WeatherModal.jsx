@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 
 function WeatherModal({
@@ -12,13 +13,15 @@ function WeatherModal({
     if (!location) return;
 
     fetch(
-      "https://api.weatherapi.com/v1/current.json?key=" +
-        import.meta.env.WEATHER_API_KEY +
-        "&q=" +
-        encodeURIComponent(location) +
-        "&aqi=no",
+      `${import.meta.env.VITE_NEWSLETTER_API_URL}/api/weather?location=${encodeURIComponent(location)}`
     )
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to fetch weather");
+        }
+
+        return response.json();
+      })
       .then((data) => {
         setWeather({
           temp: data.current.temp_c,
@@ -65,4 +68,5 @@ function WeatherModal({
     </>
   );
 }
+
 export default WeatherModal;
