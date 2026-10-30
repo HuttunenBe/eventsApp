@@ -39,4 +39,8 @@ return [
        'secret' => env('MAILJET_SECRET_KEY'),
        'list_id' => env('MAILJET_LIST_ID'),
    ],
+
+   'weather' => [
+    'key' => env('WEATHER_API_KEY'),
+],
 ];
