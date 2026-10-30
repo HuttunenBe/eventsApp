@@ -19,7 +19,7 @@ The local version of app displays events from Laravel backend and MySQL database
 * ☁️ Weather Display – Real time weather information for event locations via API
 * 📍 Google Maps Integration – Display event locations on Google Maps.
 * 📩 Contact Form – Allow users to send messages.
-* 📧 Newsletter Signup – Allow user to subscribe to newsletter updates.
+* 📧 Newsletter Signup – With Mailjet newsletter API
 * 🔍 Search & Filter – Find events by name location or category  
 *  🗓️ Calendar & List Views – Switch between calendar or list layout  
 *  🧠 Sorting – Sort by price or name (A–Z Z–A)  
@@ -40,10 +40,18 @@ ______________________
 ### 🖥️  Frontend
 * React
 * CSS
+* Vercel
+* Google Maps
+* Mailjet
+* Formspree
+* FullCalendar
 
 ### 🖥️ Backend
 * Laravel 
-* MySQL 
+* MySQL
+* Render
+* Aiven
+* Mailjet
 
 ________
 
