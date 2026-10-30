@@ -44,7 +44,7 @@ export default function NewsletterForm() {
 
     setLoading(true);
 
-const NEWSLETTER_API_URL = import.meta.env.NEWSLETTER_API_URL;
+const NEWSLETTER_API_URL = import.meta.env.VITE_NEWSLETTER_API_URL;
 
      try {
       const response = await fetch(
