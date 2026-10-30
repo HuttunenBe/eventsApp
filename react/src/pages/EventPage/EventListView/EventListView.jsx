@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { Link } from "react-router";
 import EventList from "../EventListItems/EventList";
 import GetEventEmoji from "../../../Components/Events/EventEmoji/EventEmoji";
@@ -12,7 +12,7 @@ const EventListView = ({
   setSearchValue,
 }) => {
   const [type, setType] = useState(null);
-  const sliderRef = useRef(null);
+  const [visibleEvents, setVisibleEvents] = useState(6);
 
   const search = (searchValue || "").toLowerCase();
   const safeEvents = Array.isArray(events) ? events : [];
@@ -27,17 +27,6 @@ const EventListView = ({
     return matchType && matchSearch;
   });
 
-  const scrollSlider = (direction) => {
-    const slider = sliderRef.current;
-    if (slider) {
-      const card = slider.querySelector(".eventCard");
-      if (card) {
-        const cardWidth = card.offsetWidth;
-        slider.scrollBy({ left: cardWidth * direction, behavior: "smooth" });
-      }
-    }
-  };
-
   return (
     <>
       <EventCategoryButtons setType={setType} />
@@ -50,35 +39,35 @@ const EventListView = ({
         className="searchInput"
       />
 
-      <div className="eventListContainer">
-        <button className="arrowButton left" onClick={() => scrollSlider(-1)}>
-          ‹
-        </button>
+      <div className="eventGrid">
+        {filteredEvents.slice(0, visibleEvents).map((event) => {
+          const eventEmoji = GetEventEmoji(event.type);
 
-        <div className="eventSlider" ref={sliderRef}>
-          {filteredEvents.map((event) => {
-            const eventEmoji = GetEventEmoji(event.type);
+          return (
+            <div key={event.id} className="eventGridCard">
+              <EventList
+                {...event}
+                darkMode={true}
+                eventEmoji={eventEmoji}
+                onEventModified={onEventModified}
+              />
 
-            return (
-              <div key={event.id} className="eventCard">
-                <EventList
-                  {...event}
-                  darkMode={true}
-                  eventEmoji={eventEmoji}
-                  onEventModified={onEventModified}
-                />
-                <Link className="secondary" to={`/events/${event.id}`}>
-                  Read more!
-                </Link>
-              </div>
-            );
-          })}
-        </div>
-
-        <button className="arrowButton right" onClick={() => scrollSlider(1)}>
-          ›
-        </button>
+              <Link className="secondary" to={`/events/${event.id}`}>
+                Read more!
+              </Link>
+            </div>
+          );
+        })}
       </div>
+
+      {visibleEvents < filteredEvents.length && (
+        <button
+          className="seeMoreButton"
+          onClick={() => setVisibleEvents((prev) => prev + 9)}
+        >
+          See More Events
+        </button>
+      )}
     </>
   );
 };

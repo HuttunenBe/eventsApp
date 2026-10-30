@@ -29,7 +29,6 @@ footer {
   color: #a61983;
 }
 
-
 .contactInfoSection {
   max-width: 900px;
   padding: 2rem 0;
@@ -97,6 +96,7 @@ footer form {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  margin: 2rem;
 }
 
 footer form input {
@@ -139,7 +139,6 @@ footer form button:hover {
   background-color: #8a2be2;
   color: white;
 }
-
 
 body.darkMode footer {
   background: rgba(30, 30, 30, 0.85);

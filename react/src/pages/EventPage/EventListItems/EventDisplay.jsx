@@ -10,7 +10,6 @@ const EventDisplay = ({
   price,
   image,
   eventEmoji,
-  eventImage,
   isFavorite,
   toggleFavorite,
   onEdit,

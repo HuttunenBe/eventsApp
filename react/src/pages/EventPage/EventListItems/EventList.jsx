@@ -66,14 +66,48 @@ const EventList = ({
 
   const handleUpdate = () => {
     setLoading(true);
-    put(`api/events/${id}`, editedEvent)
+
+    const updatedEvent = {
+      ...editedEvent,
+      id,
+      image,
+      price: Number(editedEvent.price),
+    };
+
+    put(`api/events/${id}`, updatedEvent)
       .then(() => {
+        const savedEvents = JSON.parse(localStorage.getItem("events") || "[]");
+
+        const updatedSavedEvents = savedEvents.filter(
+          (event) => String(event.id) !== String(id),
+        );
+
+        localStorage.setItem("events", JSON.stringify(updatedSavedEvents));
+
         alert("Event updated successfully!");
         setIsEditing(false);
-        onEventModified();
+        onEventModified?.();
       })
       .catch((error) => {
-        console.error("Failed to update event:", error);
+        console.error("Saving event locally:", error);
+
+        const savedEvents = JSON.parse(localStorage.getItem("events") || "[]");
+
+        const existingIndex = savedEvents.findIndex(
+          (event) => String(event.id) === String(id),
+        );
+
+        if (existingIndex !== -1) {
+          savedEvents[existingIndex] = updatedEvent;
+        } else {
+          savedEvents.push(updatedEvent);
+        }
+
+        localStorage.setItem("events", JSON.stringify(savedEvents));
+
+        alert("Event updated locally!");
+        setIsEditing(false);
+        onEventModified?.();
       })
       .finally(() => {
         setLoading(false);
@@ -84,11 +118,56 @@ const EventList = ({
     if (window.confirm("Are you sure you want to delete this event?")) {
       del(`api/events/${id}`)
         .then(() => {
+          const savedEvents = JSON.parse(
+            localStorage.getItem("events") || "[]",
+          );
+
+          const updatedEvents = savedEvents.filter(
+            (event) => String(event.id) !== String(id),
+          );
+
+          localStorage.setItem("events", JSON.stringify(updatedEvents));
+
+          const deletedEvents = JSON.parse(
+            localStorage.getItem("deletedEvents") || "[]",
+          );
+
+          localStorage.setItem(
+            "deletedEvents",
+            JSON.stringify(
+              deletedEvents.filter((eventId) => String(eventId) !== String(id)),
+            ),
+          );
+
           alert("Event deleted successfully!");
-          onEventModified();
+          onEventModified?.();
         })
         .catch((error) => {
-          console.error("Failed to delete event:", error);
+          console.error("Deleting event locally:", error);
+
+          const deletedEvents = JSON.parse(
+            localStorage.getItem("deletedEvents") || "[]",
+          );
+
+          if (!deletedEvents.includes(String(id))) {
+            deletedEvents.push(String(id));
+          }
+
+          localStorage.setItem("deletedEvents", JSON.stringify(deletedEvents));
+
+          const savedEvents = JSON.parse(
+            localStorage.getItem("events") || "[]",
+          );
+
+          localStorage.setItem(
+            "events",
+            JSON.stringify(
+              savedEvents.filter((event) => String(event.id) !== String(id)),
+            ),
+          );
+
+          alert("Event deleted locally!");
+          onEventModified?.();
         });
     }
   };

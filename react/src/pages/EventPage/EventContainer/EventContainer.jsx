@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router";
+import CategoryPage from "../CategoryPage/CategoryPage";
 
 import EventCalendar from "../EventCalendar/EventCalendar";
 import EventListView from "../EventListView/EventListView";
@@ -17,28 +19,52 @@ const EventContainer = () => {
   const [showAllFaq, setShowAllFaq] = useState(false);
 
   const { get } = useAxios();
+  const { category } = useParams();
 
   useEffect(() => {
     fetchEvents();
-  }, []);
+    setShowCalendar(false);
+  }, [category]);
 
   const fetchEvents = () => {
     setLoading(true);
     setError(null);
 
-  get("/api/events")
-    .then((response) => {
-      setEvents(
-        Array.isArray(response.data) ? response.data : eventsData
+    const savedEvents = JSON.parse(localStorage.getItem("events") || "[]");
+
+    const deletedEvents = JSON.parse(
+      localStorage.getItem("deletedEvents") || "[]",
+    );
+
+    const combineEvents = (backendEvents) => {
+      const combinedEvents = [...backendEvents, ...savedEvents];
+
+      const uniqueEvents = Array.from(
+        new Map(
+          combinedEvents.map((event) => [String(event.id), event]),
+        ).values(),
       );
-    })
-    .catch(() => {
-      setEvents(eventsData);
-    })
-    .finally(() => {
-      setLoading(false);
-    });
-};
+
+      return uniqueEvents.filter(
+        (event) => !deletedEvents.includes(String(event.id)),
+      );
+    };
+
+    get("/api/events")
+      .then((response) => {
+        const backendEvents = Array.isArray(response.data)
+          ? response.data
+          : eventsData;
+
+        setEvents(combineEvents(backendEvents));
+      })
+      .catch(() => {
+        setEvents(combineEvents(eventsData));
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
 
   const faqToShow = showAllFaq ? faqData : faqData.slice(0, 3);
 
@@ -66,7 +92,9 @@ const EventContainer = () => {
           <Loading />
         ) : (
           <>
-            {showCalendar ? (
+            {category ? (
+              <CategoryPage events={events} onEventModified={fetchEvents} />
+            ) : showCalendar ? (
               <EventCalendar events={events} />
             ) : (
               <EventListView

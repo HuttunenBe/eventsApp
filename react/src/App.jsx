@@ -26,6 +26,10 @@ function App() {
             <Route path="/addEvent" element={<AddEvent />} />
             <Route path="/events/:id" element={<EventDetails />} />
             <Route path="/events/:id/edit" element={<EventList />} />
+            <Route
+              path="/events/category/:category"
+              element={<EventContainer />}
+            />
           </Routes>
           <button
             className="backToTop"

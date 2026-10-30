@@ -1,15 +1,16 @@
-
 const eventsData = [
   {
     id: 1,
     name: "Lapland Northern Lights Hike",
     description: "Explore snowy trails and the Arctic wilderness.",
-    long_description: "Enjoy a winter walk through Lapland's beautiful landscapes.",
+    long_description:
+      "Enjoy a winter walk through Lapland's beautiful landscapes.",
     date: "2026-11-14",
     location: "Rovaniemi, Finland",
     type: "Outdoor & Nature",
     price: 15,
-    image: "https://images.pexels.com/photos/10809314/pexels-photo-10809314.jpeg",
+    image:
+      "https://images.pexels.com/photos/10809314/pexels-photo-10809314.jpeg",
   },
   {
     id: 2,
@@ -70,7 +71,8 @@ const eventsData = [
     id: 7,
     name: "Slush Startup Networking",
     description: "Connect with entrepreneurs and tech professionals.",
-    long_description: "A sample networking event for startup founders and technology enthusiasts.",
+    long_description:
+      "A sample networking event for startup founders and technology enthusiasts.",
     date: "2026-11-18",
     location: "Helsinki, Finland",
     type: "Learning & Networking",
@@ -81,7 +83,8 @@ const eventsData = [
     id: 8,
     name: "Photography for Beginners",
     description: "Learn photography techniques and composition.",
-    long_description: "Practice lighting and composition in a beginner-friendly workshop.",
+    long_description:
+      "Practice lighting and composition in a beginner-friendly workshop.",
     date: "2026-11-22",
     location: "Turku, Finland",
     type: "Learning & Networking",
@@ -92,7 +95,8 @@ const eventsData = [
     id: 9,
     name: "Winter Yoga Morning",
     description: "Relax with gentle yoga and breathing exercises.",
-    long_description: "Take a break from your routine with a beginner-friendly yoga session.",
+    long_description:
+      "Take a break from your routine with a beginner-friendly yoga session.",
     date: "2026-11-15",
     location: "Espoo, Finland",
     type: "Health & Wellness",
@@ -103,7 +107,8 @@ const eventsData = [
     id: 10,
     name: "Mindfulness and Meditation",
     description: "Find calm through guided meditation.",
-    long_description: "Learn simple mindfulness techniques in a relaxing group session.",
+    long_description:
+      "Learn simple mindfulness techniques in a relaxing group session.",
     date: "2026-11-25",
     location: "Oulu, Finland",
     type: "Health & Wellness",
@@ -114,18 +119,21 @@ const eventsData = [
     id: 11,
     name: "Winter Jazz",
     description: "Enjoy an evening of live jazz music.",
-    long_description: "Listen to live jazz performances in a cozy winter atmosphere.",
+    long_description:
+      "Listen to live jazz performances in a cozy winter atmosphere.",
     date: "2026-12-05",
     location: "Oulu, Finland",
     type: "Music & Entertainment",
     price: 18,
-    image: "https://images.pexels.com/photos/13108389/pexels-photo-13108389.jpeg",
+    image:
+      "https://images.pexels.com/photos/13108389/pexels-photo-13108389.jpeg",
   },
   {
     id: 12,
     name: "Live Music and Open Mic",
     description: "Discover local musicians and performers.",
-    long_description: "Enjoy live music, poetry and performances from local talent.",
+    long_description:
+      "Enjoy live music, poetry and performances from local talent.",
     date: "2026-11-28",
     location: "Tampere, Finland",
     type: "Music & Entertainment",
@@ -147,7 +155,8 @@ const eventsData = [
     id: 14,
     name: "Community Clothing Swap",
     description: "Exchange clothes and discover pre-loved fashion.",
-    long_description: "Bring clean clothes you no longer need and find something new.",
+    long_description:
+      "Bring clean clothes you no longer need and find something new.",
     date: "2026-11-29",
     location: "Turku, Finland",
     type: "Markets & Swaps",
@@ -158,7 +167,8 @@ const eventsData = [
     id: 15,
     name: "Family Christmas Craft Day",
     description: "Make festive decorations together.",
-    long_description: "Enjoy creative activities and seasonal crafts for children and families.",
+    long_description:
+      "Enjoy creative activities and seasonal crafts for children and families.",
     date: "2026-12-06",
     location: "Turku, Finland",
     type: "Family & Kids",
@@ -169,7 +179,8 @@ const eventsData = [
     id: 16,
     name: "Kids Indoor Adventure",
     description: "Enjoy games and creative activities for kids.",
-    long_description: "A family-friendly day featuring games and activities for children.",
+    long_description:
+      "A family-friendly day featuring games and activities for children.",
     date: "2026-11-22",
     location: "Espoo, Finland",
     type: "Family & Kids",
@@ -180,7 +191,8 @@ const eventsData = [
     id: 17,
     name: "Community Badminton Meetup",
     description: "Play badminton and meet fellow sports fans.",
-    long_description: "Join friendly badminton matches for different skill levels.",
+    long_description:
+      "Join friendly badminton matches for different skill levels.",
     date: "2026-11-20",
     location: "Tampere, Finland",
     type: "Sports & Games",
@@ -202,7 +214,8 @@ const eventsData = [
     id: 19,
     name: "Winter Welcome Party",
     description: "Celebrate winter with music and social activities.",
-    long_description: "Meet new people and enjoy an evening of seasonal celebrations.",
+    long_description:
+      "Meet new people and enjoy an evening of seasonal celebrations.",
     date: "2026-12-04",
     location: "Helsinki, Finland",
     type: "Parties & Celebration",
@@ -231,18 +244,21 @@ const eventsData = [
     location: "Helsinki, Finland",
     type: "Music & Entertainment",
     price: 20,
-    image: "https://images.pexels.com/photos/28987833/pexels-photo-28987833.jpeg",
+    image:
+      "https://images.pexels.com/photos/28987833/pexels-photo-28987833.jpeg",
   },
   {
     id: 22,
     name: "Art Expo",
     description: "Discover art and creative exhibitions.",
-    long_description: "A sample art exhibition featuring creative works in Tampere.",
+    long_description:
+      "A sample art exhibition featuring creative works in Tampere.",
     date: "2027-08-10",
     location: "Tampere, Finland",
     type: "Hobbies & DIY",
     price: 10,
-    image: "https://images.pexels.com/photos/29901209/pexels-photo-29901209.jpeg",
+    image:
+      "https://images.pexels.com/photos/29901209/pexels-photo-29901209.jpeg",
   },
   {
     id: 23,
@@ -264,7 +280,8 @@ const eventsData = [
     location: "Oulu, Finland",
     type: "Music & Entertainment",
     price: 18,
-    image: "https://images.pexels.com/photos/13108389/pexels-photo-13108389.jpeg",
+    image:
+      "https://images.pexels.com/photos/13108389/pexels-photo-13108389.jpeg",
   },
   {
     id: 25,
@@ -286,7 +303,8 @@ const eventsData = [
     location: "Rovaniemi, Finland",
     type: "Outdoor & Nature",
     price: 15,
-    image: "https://images.pexels.com/photos/10809314/pexels-photo-10809314.jpeg",
+    image:
+      "https://images.pexels.com/photos/10809314/pexels-photo-10809314.jpeg",
   },
   {
     id: 27,
@@ -298,6 +316,189 @@ const eventsData = [
     type: "Learning & Networking",
     price: 0,
     image: "https://images.pexels.com/photos/7869452/pexels-photo-7869452.jpeg",
+  },
+  {
+    id: 28,
+    name: "Digital Marketing Workshop",
+    description: "Learn the basics of digital marketing and social media.",
+    long_description:
+      "Join a practical workshop covering social media strategies, content creation and online marketing.",
+    date: "2026-11-30",
+    location: "Helsinki, Finland",
+    type: "Learning & Networking",
+    price: 15,
+    image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
+  },
+  {
+    id: 29,
+    name: "Creative Writing Workshop",
+    description: "Explore storytelling and improve your writing skills.",
+    long_description:
+      "Practice creative writing techniques, share ideas and receive feedback from other participants.",
+    date: "2026-12-03",
+    location: "Turku, Finland",
+    type: "Learning & Networking",
+    price: 10,
+    image: "https://images.pexels.com/photos/261763/pexels-photo-261763.jpeg",
+  },
+  {
+    id: 30,
+    name: "Women in Business Networking",
+    description: "Connect with women entrepreneurs and professionals.",
+    long_description:
+      "An inspiring networking evening with opportunities to exchange experiences and build professional connections.",
+    date: "2026-12-08",
+    location: "Tampere, Finland",
+    type: "Learning & Networking",
+    price: 12,
+    image: "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg",
+  },
+  {
+    id: 31,
+    name: "Beginner Coding Meetup",
+    description: "Meet other beginners interested in programming.",
+    long_description:
+      "Discuss programming, explore beginner-friendly coding projects and connect with other learners.",
+    date: "2026-12-12",
+    location: "Oulu, Finland",
+    type: "Learning & Networking",
+    price: 0,
+    image: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg",
+  },
+  {
+    id: 32,
+    name: "Personal Finance Seminar",
+    description: "Learn practical tips for managing your money.",
+    long_description:
+      "Explore budgeting, saving and financial planning in this beginner-friendly seminar.",
+    date: "2026-12-16",
+    location: "Espoo, Finland",
+    type: "Learning & Networking",
+    price: 8,
+    image: "https://images.pexels.com/photos/6694543/pexels-photo-6694543.jpeg",
+  },
+  {
+    id: 33,
+    name: "Public Speaking Practice",
+    description: "Build confidence and improve your presentation skills.",
+    long_description:
+      "Practice public speaking in a supportive environment and learn how to communicate ideas clearly.",
+    date: "2027-01-10",
+    location: "Helsinki, Finland",
+    type: "Learning & Networking",
+    price: 10,
+    image: "https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg",
+  },
+  {
+    id: 34,
+    name: "Language Exchange Evening",
+    description: "Practice different languages and meet new people.",
+    long_description:
+      "Join an informal language exchange where participants can practice languages and learn about different cultures.",
+    date: "2027-01-15",
+    location: "Turku, Finland",
+    type: "Learning & Networking",
+    price: 5,
+    image: "https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg",
+  },
+  {
+    id: 35,
+    name: "Photography Business Seminar",
+    description: "Learn how to turn photography into a business.",
+    long_description:
+      "Discover pricing, marketing and client management tips for aspiring professional photographers.",
+    date: "2027-01-22",
+    location: "Tampere, Finland",
+    type: "Learning & Networking",
+    price: 20,
+    image: "https://images.pexels.com/photos/274973/pexels-photo-274973.jpeg",
+  },
+  {
+    id: 36,
+    name: "Sustainable Living Workshop",
+    description: "Discover practical ways to live more sustainably.",
+    long_description:
+      "Learn about sustainable choices, reducing waste and making environmentally conscious everyday decisions.",
+    date: "2027-02-02",
+    location: "Jyväskylä, Finland",
+    type: "Learning & Networking",
+    price: 8,
+    image: "https://images.pexels.com/photos/3735218/pexels-photo-3735218.jpeg",
+  },
+  {
+    id: 37,
+    name: "Entrepreneurship Meetup",
+    description:
+      "Share business ideas and connect with aspiring entrepreneurs.",
+    long_description:
+      "An informal meetup for people interested in starting businesses, sharing ideas and finding potential collaborators.",
+    date: "2027-02-10",
+    location: "Helsinki, Finland",
+    type: "Learning & Networking",
+    price: 0,
+    image: "https://images.pexels.com/photos/1181395/pexels-photo-1181395.jpeg",
+  },
+  {
+    id: 38,
+    name: "Introduction to Graphic Design",
+    description: "Explore design principles and creative tools.",
+    long_description:
+      "Learn about typography, colours and layouts while creating your own simple graphic design project.",
+    date: "2027-02-18",
+    location: "Lahti, Finland",
+    type: "Learning & Networking",
+    price: 18,
+    image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg",
+  },
+  {
+    id: 39,
+    name: "Career Development Workshop",
+    description: "Get tips for CV writing and job interviews.",
+    long_description:
+      "Learn how to improve your CV, prepare for interviews and present your professional skills.",
+    date: "2027-03-05",
+    location: "Oulu, Finland",
+    type: "Learning & Networking",
+    price: 10,
+    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+  },
+  {
+    id: 40,
+    name: "AI for Beginners",
+    description:
+      "Discover how artificial intelligence is used in everyday life.",
+    long_description:
+      "Explore basic AI concepts, practical applications and useful tools in this introductory session.",
+    date: "2027-03-12",
+    location: "Tampere, Finland",
+    type: "Learning & Networking",
+    price: 15,
+    image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg",
+  },
+  {
+    id: 41,
+    name: "Book Club and Discussion",
+    description: "Meet fellow readers and discuss inspiring books.",
+    long_description:
+      "Enjoy an evening of conversation, book recommendations and thoughtful discussions with other readers.",
+    date: "2027-03-20",
+    location: "Turku, Finland",
+    type: "Learning & Networking",
+    price: 5,
+    image:
+      "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg",
+  },
+  {
+    id: 42,
+    name: "Startup Pitching Night",
+    description: "Watch creative business ideas and meet startup founders.",
+    long_description:
+      "An evening where aspiring entrepreneurs present their ideas, receive feedback and connect with other professionals.",
+    date: "2027-04-02",
+    location: "Helsinki, Finland",
+    type: "Learning & Networking",
+    price: 12,
+    image: "https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg",
   },
 ];
 

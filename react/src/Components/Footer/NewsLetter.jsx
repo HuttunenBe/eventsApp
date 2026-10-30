@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function NewsletterForm() {
   const [loading, setLoading] = useState(false);
@@ -7,7 +7,7 @@ export default function NewsletterForm() {
   const [consentError, setConsentError] = useState(false);
 
   const [formValues, setFormValues] = useState({
-    email: '',
+    email: "",
   });
 
   const onSubmit = async (e) => {
@@ -19,19 +19,17 @@ export default function NewsletterForm() {
     setConsentError(false);
 
     const cleanedNewsletterValues = {
-      email: (formValues.email || '').trim().toLowerCase(),
+      email: (formValues.email || "").trim().toLowerCase(),
     };
 
     const validationError = {};
 
     if (!cleanedNewsletterValues.email) {
-      validationError.email = 'Email is required.';
+      validationError.email = "Email is required.";
     } else if (
-      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
-        cleanedNewsletterValues.email
-      )
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cleanedNewsletterValues.email)
     ) {
-      validationError.email = 'Please enter a valid email address.';
+      validationError.email = "Please enter a valid email address.";
     }
 
     if (Object.keys(validationError).length > 0) {
@@ -46,10 +44,11 @@ export default function NewsletterForm() {
 
     setLoading(true);
 
-    try {
-      const response = await fetch(
-        'http://127.0.0.1:8000/api/newsletter',
-        {
+
+     try {
+      const response = await 
+        fetch("api/newsletter", {
+        
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -65,29 +64,21 @@ export default function NewsletterForm() {
       const data = await response.json();
 
       if (!response.ok) {
-        alert(
-          data.message ||
-            'Error. Please try again later.'
-        );
+        alert(data.message || "Error. Please try again later.");
         return;
       }
 
-      alert(
-        data.message ||
-          'Thank you for subscribing to the newsletter.'
-      );
+      alert(data.message || "Thank you for subscribing to the newsletter.");
 
       setFormValues({
-        email: '',
+        email: "",
       });
 
       setConsent(false);
     } catch (error) {
-      console.error('Newsletter request failed:', error);
+      console.error("Newsletter request failed:", error);
 
-      alert(
-        'Error. Please try again later.'
-      );
+      alert("Error. Please try again later.");
     } finally {
       setLoading(false);
     }
@@ -110,7 +101,7 @@ export default function NewsletterForm() {
 
             setError((previousError) => ({
               ...previousError,
-              email: '',
+              email: "",
             }));
           }}
           required
@@ -120,26 +111,24 @@ export default function NewsletterForm() {
       </div>
 
       <div>
-   <label className="newsletterCheckbox">
-  <input
-    id="newsletterCheckbox"
-    type="checkbox"
-    checked={consent}
-    onChange={(e) => {
-      setConsent(e.target.checked);
-      setConsentError(false);
-    }}
-  />
-  I agree to receive the newsletter by email.
-</label>
+        <label className="newsletterCheckbox">
+          <input
+            id="newsletterCheckbox"
+            type="checkbox"
+            checked={consent}
+            onChange={(e) => {
+              setConsent(e.target.checked);
+              setConsentError(false);
+            }}
+          />
+          I agree to receive the newsletter by email.
+        </label>
 
-        {consentError && (
-          <p>Please tick the checkbox before subscribing.</p>
-        )}
+        {consentError && <p>Please tick the checkbox before subscribing.</p>}
       </div>
 
       <button type="submit" disabled={loading}>
-        {loading ? 'Subscribing' : 'Subscribe'}
+        {loading ? "Subscribing" : "Subscribe"}
       </button>
     </form>
   );
