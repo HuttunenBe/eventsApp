@@ -1,24 +1,25 @@
 
 # 🌟 Events App – Highlight Events 
 
-This web app started as a team project at Business College Helsinki. I decided to finish it on my own, keeping the parts I built and adding new features myself. The app is about discovering and managing local events all around Finland.
-Users can explore, add, edit and delete events, with all changes saved to a database. It has several other features like dark mode, weather info, maps for event locations, a read more button, emoji icons for event types, calendar view and multiple ways to search or sort events. 
+This web app started as a team project at Business College Helsinki. I decided to finish it on my own, keeping the parts I built and adding new features myself. The app is about discovering and managing local events all around Finland. Users can explore, add, edit and delete events, with all changes saved to a database/localstorage. It has several other features like newsletter signup, contact form, dark mode, weather info, maps for event locations, read more button, calendar view and multiple ways to search or sort events. 
+
+The local version of app displays events from Laravel backend and MySQL database. Deployed version from frontend with changes and new events being saved into localstorage. 
+
 <br></br>
 
 <img src="eventsAppImage.png" alt="app Screenshot">
 
 
 ## 🌐 Live Demo
-[**Events App on Vercel**](https://events-app-fawn.vercel.app/)
-
-Check out how the event tickets work:  
-[Demo on YouTube](https://youtu.be/0NzhdpnYPQQ)
-
-
+[**Events App on Vercel**](https://events-app-git-main-beniittas-projects.vercel.app/)
 
 
 ## 🚀 Features
 
+* ☁️ Weather Display – Real time weather information for event locations via API
+* 📍 Google Maps Integration – Display event locations on Google Maps.
+* 📩 Contact Form – Allow users to send messages.
+* 📧 Newsletter Signup – With Mailjet newsletter API
 * 🔍 Search & Filter – Find events by name location or category  
 *  🗓️ Calendar & List Views – Switch between calendar or list layout  
 *  🧠 Sorting – Sort by price or name (A–Z Z–A)  
@@ -29,9 +30,8 @@ Check out how the event tickets work:
 *   📜 Back to Top Button – Easy scroll back
 *   🎠 Popular Events Slider – Scrollable slider for popular events
 * ⏳ Loading Indicators – On multiple pages using React Spinners
-* ☁️ Weather Display – Real time weather information for event locations via external API
-* 🗺️ Map Display – Google Maps for event locations
-*   Working on: CSS, User Authentication
+
+  
 
 
 ______________________
@@ -40,10 +40,18 @@ ______________________
 ### 🖥️  Frontend
 * React
 * CSS
+* Vercel
+* Google Maps
+* Mailjet
+* Formspree
+* FullCalendar
 
 ### 🖥️ Backend
 * Laravel 
-* MySQL 
+* MySQL
+* Render
+* Aiven
+* Mailjet
 
 ________
 
