@@ -9,11 +9,12 @@ body {
   flex-direction: column;
 }
 .addEventGreeting {
-  background: linear-gradient(135deg, #f26990, #8b50eb);
+  /* background: linear-gradient(135deg, #f26990, #8b50eb);
   background: linear-gradient(3deg, #f26990, #8b50eb);
   background: linear-gradient(3deg, #8b50eb, #f26990);
   background: linear-gradient(to bottom right, #8b50eb, #f26990);
-
+*/
+  background: #6046b5;
   color: white;
   text-align: center;
   width: 80vw;
@@ -21,7 +22,6 @@ body {
   padding: 2.5rem 1.5rem;
   border-radius: 1.25rem;
   margin: 1.5rem auto;
-  box-shadow: 0 10px 30px rgba(111, 85, 214, 0.4);
 }
 
 .addEventGreeting h1 {
@@ -33,22 +33,22 @@ body {
   max-width: 600px;
   font-size: 1rem;
   line-height: 1.5;
+  color: white;
   margin: 0 auto;
 }
 
 .addEventFormContainer {
   background-color: white;
-  max-width: 450px;
+  max-width: 500px;
   width: 70vw;
   padding: 2rem;
   margin: 0 auto;
   border-radius: 2rem;
-  box-shadow: 0 10px 30px rgba(111, 85, 214, 0.4);
 }
 
 .addEventFormContainer h2 {
   text-align: center;
-  color: #9d4edd;
+  color: #000000;
   margin-bottom: 2rem;
   font-size: 2rem;
 }
@@ -64,9 +64,9 @@ body {
 .addEventFormContainer textarea,
 .addEventFormContainer select {
   background-color: white;
-  border: 2px solid #e6b8f4;
+  border: 2px solid #d5d5d5;
   font-size: 1rem;
-  border-radius: 1rem;
+  border-radius: 0.6rem;
   padding: 0.8rem 0.9rem;
   transition: border-color 0.3s ease;
 }
@@ -80,7 +80,7 @@ body {
 }
 
 .addEventFormContainer button {
-  background: linear-gradient(to right, #ff4d6d, #b51a71);
+  background: #6046b5;
   color: white;
   padding: 1rem;
   font-size: 1rem;

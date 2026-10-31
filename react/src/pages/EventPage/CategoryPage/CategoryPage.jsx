@@ -42,7 +42,7 @@ const CategoryPage = ({ events = [], onEventModified }) => {
           {visibleEvents < filteredEvents.length && (
             <button
               className="seeMoreButton"
-              onClick={() => setVisibleEvents((prev) => prev + 9)} 
+              onClick={() => setVisibleEvents((prev) => prev + 9)}
             >
               See More Events
             </button>

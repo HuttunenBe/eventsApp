@@ -44,23 +44,20 @@ export default function NewsletterForm() {
 
     setLoading(true);
 
-const NEWSLETTER_API_URL = import.meta.env.VITE_NEWSLETTER_API_URL;
+    const NEWSLETTER_API_URL = import.meta.env.VITE_NEWSLETTER_API_URL;
 
-     try {
-      const response = await fetch(
-  `${NEWSLETTER_API_URL}/api/newsletter`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Accept: 'application/json',
-          },
-          body: JSON.stringify({
-            email: cleanedNewsletterValues.email,
-            consent: consent,
-          }),
-        }
-      );
+    try {
+      const response = await fetch(`${NEWSLETTER_API_URL}/api/newsletter`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          email: cleanedNewsletterValues.email,
+          consent: consent,
+        }),
+      });
 
       const data = await response.json();
 
