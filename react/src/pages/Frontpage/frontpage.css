@@ -9,7 +9,6 @@
   margin-top: 1rem;
   text-align: center;
   line-height: 1.4;
-  box-shadow: 0 6px 20px rgba(114, 9, 183, 0.3);
 }
 
 .exploreButton,
@@ -60,7 +59,6 @@
 
 .learnMoreButton:hover {
   background-color: #7209b7;
-
   transform: scale(1.05);
   color: white;
 }
@@ -124,7 +122,6 @@
   text-align: center;
   padding: 3rem 1rem;
   border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(240, 46, 170, 0.1);
 }
 
 .hostEventSection p {
@@ -227,7 +224,6 @@
   background-color: #f1e6f9;
   padding: 2rem 1rem;
   margin-bottom: 3rem;
-  border-radius: 1.2rem;
 }
 
 .popularEventsSection h2 {

@@ -5,6 +5,7 @@ body {
 .addEventBody {
   min-height: 100vh;
   background: linear-gradient(135deg, #e0dffb, #f5f3ff);
+  
   display: flex;
   flex-direction: column;
 }
@@ -15,6 +16,7 @@ body {
   background: linear-gradient(to bottom right, #8b50eb, #f26990);
 */
   background: #6046b5;
+  background: linear-gradient(135deg, #f62eec, #523abc);
   color: white;
   text-align: center;
   width: 80vw;
@@ -81,6 +83,7 @@ body {
 
 .addEventFormContainer button {
   background: #6046b5;
+  background: linear-gradient(135deg, #f62eec, #523abc);
   color: white;
   padding: 1rem;
   font-size: 1rem;

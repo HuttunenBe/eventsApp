@@ -1,6 +1,7 @@
 import { useState } from "react";
 import WeatherModal from "../../../Components/Events/Map&Weather/WeatherModal";
 import MapModal from "../../../Components/Events/Map&Weather/MapModal";
+import './eventListItems.css'
 
 const EventDisplay = ({
   name,

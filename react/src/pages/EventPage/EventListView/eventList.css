@@ -270,7 +270,7 @@ body.darkMode .arrowButton:hover {
   min-height: 280px;
   padding: 1.5rem;
   border-radius: 1.2rem;
-  background: linear-gradient(145deg, #ffffff, #f5eaff);
+background-color: white;
   box-shadow: 0 5px 20px rgba(100, 40, 150, 0.12);
   border: 1px solid #ead8fa;
   transition:
