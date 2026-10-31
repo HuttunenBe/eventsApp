@@ -1,8 +1,8 @@
 footer {
-  background: linear-gradient(135deg, #ff69b4 0%, #8a2be2 100%);
+  background: linear-gradient(135deg, #e3559c 0%, #8338ec 100%);
   text-align: center;
   color: #ffffff;
-  padding: 2.5rem 4rem;
+  padding: 3rem 2rem;
 }
 
 .footerLinks {
@@ -20,17 +20,17 @@ footer {
 .footerLinks a {
   color: #ffffff;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1.2rem;
+  font-weight: 600;
+  font-size: 1rem;
   transition: color 0.3s ease;
 }
 
 .footerLinks a:hover {
-  color: #a61983;
+  color: #ffd6f0;
 }
 
 .contactInfoSection {
-  max-width: 900px;
+  max-width: 1000px;
   padding: 2rem 0;
   margin: 0 auto;
 }
@@ -44,8 +44,9 @@ footer {
 
 .contactIntro {
   font-size: 1rem;
+  line-height: 1.7;
   margin-bottom: 2rem;
-  color: #ffe4f2;
+  color: #fff0f7;
 }
 
 .contactInfoWrapper {
@@ -59,7 +60,8 @@ footer {
   background: rgba(255, 255, 255, 0.1);
   padding: 1.2rem;
   border-radius: 1rem;
-  box-shadow: 0 15px 35px rgba(106, 17, 203, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 20px rgba(106, 17, 203, 0.2);
   transition: transform 0.2s ease;
 }
 
@@ -78,7 +80,7 @@ footer {
 .contactCard a {
   color: #fff;
   margin: 0.5rem;
-  line-height: 1.2;
+  line-height: 1.6;
   word-wrap: break-word;
   display: flex;
   align-items: left;
@@ -96,10 +98,14 @@ footer form {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  margin: 2rem;
+  max-width: 400px;
+  margin: 2rem auto 0;
+  max-width: 400px;
+  width: 100%;
 }
 
 footer form input {
+  box-sizing: border-box;
   width: 100%;
   max-width: 280px;
   padding: 0.6rem 0.9rem;

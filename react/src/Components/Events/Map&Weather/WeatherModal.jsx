@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 
 function WeatherModal({
@@ -13,7 +12,7 @@ function WeatherModal({
     if (!location) return;
 
     fetch(
-      `${import.meta.env.VITE_NEWSLETTER_API_URL}/api/weather?location=${encodeURIComponent(location)}`
+      `${import.meta.env.VITE_NEWSLETTER_API_URL}/api/weather?location=${encodeURIComponent(location)}`,
     )
       .then((response) => {
         if (!response.ok) {
