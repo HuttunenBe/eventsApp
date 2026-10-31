@@ -1,5 +1,8 @@
 footer {
   background: linear-gradient(135deg, #e3559c 0%, #8338ec 100%);
+  background: linear-gradient(135deg, #f62eec, #523abc);
+    background: linear-gradient(135deg, #ff006e, #8338ec);
+
   text-align: center;
   color: #ffffff;
   padding: 3rem 2rem;

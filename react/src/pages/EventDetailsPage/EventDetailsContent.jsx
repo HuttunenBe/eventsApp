@@ -24,11 +24,7 @@ const EventDetailsContent = ({ event, navigate }) => {
           <p>
             <strong>Date:</strong> {event.date}
           </p>
-          <p>
-            <strong>Location: </strong>
-            <br />
-            <MapModal location={event.location} />
-          </p>
+        
           <div>
             <strong>Weather:</strong>
             <WeatherModal location={event.location} showCloseButton={false} />
@@ -36,6 +32,10 @@ const EventDetailsContent = ({ event, navigate }) => {
           <p>
             <strong>Price:</strong> €{event.price}
           </p>
+         <div className="eventLocation">
+  <strong>Location:</strong>
+  <MapModal location={event.location} />
+</div>
         </div>
 
         <div className="eventDescription">

@@ -1,10 +1,10 @@
 .eventTicket {
   max-width: 300px;
-  background-color: #dededeea;
+  background-color: #ffffffea;
   border-radius: 1rem;
   padding: 1.2rem 1.5rem;
   margin-bottom: 1.2rem;
-  border: 3px rgba(224, 224, 224, 0.274) solid;
+  border: 3px rgba(197, 197, 197, 0.274) solid;
   color: #59189a43;
   text-align: center;
   transition: transform 0.2s ease;
@@ -26,7 +26,7 @@
   width: 150px;
   height: 150px;
   position: relative;
-  top: -10px;
+  top: -8px;
   border-radius: 50%;
   object-fit: cover;
   border: white 3px solid;
@@ -35,8 +35,8 @@
 }
 
 .eventTicket button {
-  background-color: #d66bb9;
-  color: white;
+ background-color: rgb(232, 232, 232);
+  color: rgb(0, 0, 0);
   font-weight: 700;
   font-size: 1rem;
   margin-top: 0.6rem;
@@ -52,6 +52,9 @@
   background-color: #9d4edd;
   transform: scale(1.05);
 }
+
+
+
 
 body.darkMode .eventTicket {
   background: linear-gradient(135deg, #3d2c54, #5e3d85);
