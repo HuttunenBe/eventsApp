@@ -5,6 +5,7 @@ import CountDown from "./CountDown";
 import "./frontpage.css";
 import WeatherModal from "../../Components/Events/Map&Weather/WeatherModal";
 
+
 const Frontpage = () => {
   const navigate = useNavigate();
   const sliderRef = useRef(null);
