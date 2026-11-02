@@ -16,10 +16,10 @@ The local version of app displays events from Laravel backend and MySQL database
 
 ## 🚀 Features
 
-* ☁️ Weather Display – Real time weather information for event locations via API
+* ☁️ Weather Display – Real time weather information for event locations via API (Only on local)
 * 📍 Google Maps Integration – Display event locations on Google Maps.
 * 📩 Contact Form – Allow users to send messages.
-* 📧 Newsletter Signup – With Mailjet newsletter API
+* 📧 Newsletter Signup – With Mailjet newsletter API (Only on local)
 * 🔍 Search & Filter – Find events by name location or category  
 *  🗓️ Calendar & List Views – Switch between calendar or list layout  
 *  🧠 Sorting – Sort by price or name (A–Z Z–A)  
