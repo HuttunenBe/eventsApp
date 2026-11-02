@@ -50,7 +50,7 @@ function Footer() {
           </div>
           <div className="contactCard">
             <h4>⏰ Office Hours</h4>
-            <p>Mon–Fri: 9:00 AM – 5:00 PM</p>
+            <p>Mon–Fri: 9:00 AM – 6:00 PM</p>
           </div>
         </div>
         <Newsletter />

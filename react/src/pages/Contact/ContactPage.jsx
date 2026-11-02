@@ -81,7 +81,7 @@ const ContactPage = () => {
               required
               value={formData.message}
               onChange={handleChange}
-              placeholder="Write your message here"
+              placeholder="How can we help?"
               rows={5}
               aria-required="true"
             />
