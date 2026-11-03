@@ -5,6 +5,7 @@ import EventDetailsContent from "./EventDetailsContent";
 import "./eventDetails.css";
 import Loading from "../../Components/Loading/Loading";
 import eventsData from "../EventPage/EventContainer/eventsData";
+import PopularEventsData from "../Frontpage/PopularEventsData";
 
 const EventDetails = () => {
   const { id } = useParams();

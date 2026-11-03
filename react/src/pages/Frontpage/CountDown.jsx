@@ -8,7 +8,8 @@ const Countdown = ({ targetDate }) => {
     if (difference <= 0) return null;
 
     return {
-      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      years: Math.floor(difference / (1000 * 60 * 60 * 24 * 365)),
+      days: Math.floor((difference / (1000 * 60 * 60 * 24)) % 365),
       hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
       minutes: Math.floor((difference / 1000 / 60) % 60),
       seconds: Math.floor((difference / 1000) % 60),
@@ -31,7 +32,8 @@ const Countdown = ({ targetDate }) => {
 
   return (
     <span>
-      {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
+      {timeLeft.years}y {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m{" "}
+      {timeLeft.seconds}s
     </span>
   );
 };

@@ -5,14 +5,12 @@ import CountDown from "./CountDown";
 import "./frontpage.css";
 import WeatherModal from "../../Components/Events/Map&Weather/WeatherModal";
 
-
 const Frontpage = () => {
   const navigate = useNavigate();
   const sliderRef = useRef(null);
 
-  const convertToDate = (dateStr) => {
-    const currentYear = new Date().getFullYear();
-    return new Date(`${dateStr} ${currentYear} 00:00:00`).toISOString();
+  const convertToDate = (event) => {
+    return new Date(`${event.date} ${event.year} 00:00:00`).toISOString();
   };
 
   const scrollSlider = (direction) => {
@@ -68,7 +66,7 @@ const Frontpage = () => {
                 <img src={event.img} alt={event.title} />
                 <h4>{event.title} </h4>
                 <p>
-                  {event.date}{" "}
+                  {event.date}, {event.year}{" "}
                   <WeatherModal
                     location={event.location}
                     showCloseButton={false}
@@ -76,7 +74,7 @@ const Frontpage = () => {
                   />{" "}
                 </p>
 
-                <CountDown targetDate={convertToDate(event.date)} />
+                <CountDown targetDate={convertToDate(event)} />
               </div>
             ))}
           </div>

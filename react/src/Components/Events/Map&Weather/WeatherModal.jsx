@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./weather.css"
+import "./weather.css";
 
 function WeatherModal({
   location,
