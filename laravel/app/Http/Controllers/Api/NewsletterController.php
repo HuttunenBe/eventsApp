@@ -27,7 +27,7 @@ class NewsletterController extends Controller
         $secretKey = config('services.mailjet.secret');
         $listId = config('services.mailjet.list_id');
 
-        if (!$apiKey || !$secretKey || !$listId) {
+        if (! $apiKey || ! $secretKey || ! $listId) {
             return response()->json([
                 'message' => 'Newsletter service is not configured.',
             ], 500);
@@ -38,8 +38,8 @@ class NewsletterController extends Controller
             $secretKey
         )->post(
             'https://api.mailjet.com/v3/REST/contactslist/'
-                . $listId
-                . '/managemanycontacts',
+                .$listId
+                .'/managemanycontacts',
             [
                 'Action' => 'addnoforce',
                 'Contacts' => [

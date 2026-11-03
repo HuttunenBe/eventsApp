@@ -34,12 +34,12 @@ return [
 
     // Mailjet newsletter settings
     'mailjet' => [
-       'key' => env('MAILJET_API_KEY'),
-       'secret' => env('MAILJET_SECRET_KEY'),
-       'list_id' => env('MAILJET_LIST_ID'),
-   ],
+        'key' => env('MAILJET_API_KEY'),
+        'secret' => env('MAILJET_SECRET_KEY'),
+        'list_id' => env('MAILJET_LIST_ID'),
+    ],
 
-   'weather' => [
-    'key' => env('WEATHER_API_KEY'),
-],
+    'weather' => [
+        'key' => env('WEATHER_API_KEY'),
+    ],
 ];

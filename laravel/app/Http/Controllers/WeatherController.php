@@ -22,7 +22,7 @@ class WeatherController extends Controller
             ]
         );
 
-        if (!$response->successful()) {
+        if (! $response->successful()) {
             return response()->json([
                 'message' => 'Unable to fetch weather.',
             ], 502);

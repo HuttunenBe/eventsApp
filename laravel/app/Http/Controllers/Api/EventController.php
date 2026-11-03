@@ -1,18 +1,17 @@
 <?php
 
-
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\EventData;
+use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
-public function index()
-{
-    return response()->json(EventData::all());
-}
+    public function index()
+    {
+        return response()->json(EventData::all());
+    }
 
     public function store(Request $request)
     {
@@ -28,6 +27,7 @@ public function index()
         ]);
 
         $eventData = EventData::create($validated);
+
         return response()->json($eventData, 201);
     }
 
@@ -52,6 +52,7 @@ public function index()
         ]);
 
         $eventData->update($validated);
+
         return response()->json($eventData);
     }
 
@@ -59,6 +60,7 @@ public function index()
     {
         $eventData = EventData::findOrFail($id);
         $eventData->delete();
+
         return response()->json(null, 204);
     }
 }
